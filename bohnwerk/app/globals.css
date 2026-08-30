@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream-50 text-ink-900 font-body antialiased;
+}
+
+::selection {
+  @apply bg-copper-300/60 text-ink-900;
+}
+
+*:focus-visible {
+  outline: 2px solid theme('colors.copper.500');
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container-px {
+  @apply px-5 sm:px-6 lg:px-8;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.text-balance { text-wrap: balance; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+.btn-focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-copper-500 focus-visible:outline-offset-2;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.18em];
+}
