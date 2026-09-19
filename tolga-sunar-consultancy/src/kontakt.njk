@@ -1,0 +1,153 @@
+---
+layout: layouts/base.njk
+title: "Kontakt – Kostenloses Erstgespräch vereinbaren"
+description: "Vereinbaren Sie ein kostenloses, unverbindliches Erstgespräch mit Tolga Sunar Consultancy zu ISO 9001, ISO 14001, ISO 45001, DIN 77200 oder integrierten Managementsystemen."
+bodyClass: "page-kontakt"
+permalink: /kontakt/
+---
+{% from "partials/macros.njk" import breadcrumbs %}
+{% from "partials/icons.njk" import icon %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Kontakt" }]) }}
+    <span class="eyebrow">Kontakt &amp; Erstberatung</span>
+    <h1>Lassen Sie uns über Ihr Vorhaben sprechen</h1>
+    <p class="page-hero__lede">Im kostenlosen Erstgespräch klären wir Ihre Ausgangslage, die relevanten Normen und einen realistischen Zeitrahmen – unverbindlich und ohne Vorbereitung Ihrerseits.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <h2 style="font-size:1.4rem;">Anfrageformular</h2>
+      <p class="text-muted" style="margin-top:0.5rem;">Je konkreter Ihre Angaben, desto zielgerichteter können wir das Erstgespräch vorbereiten.</p>
+
+      <form class="form-grid" style="margin-top:1.75rem;" data-contact-form data-endpoint="#" novalidate>
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="website">Bitte freilassen</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label for="name">Vor- und Nachname</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <span class="form-error" data-error-for="name"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="company">Unternehmen</label>
+          <input type="text" id="company" name="company" autocomplete="organization" required>
+          <span class="form-error" data-error-for="company"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-Mail-Adresse</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="form-error" data-error-for="email"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Telefonnummer <span class="optional">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+          <span class="form-error" data-error-for="phone"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="topic">Gewünschte Norm / Leistung</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Bitte auswählen</option>
+            <option value="ISO 9001">ISO 9001 – Qualitätsmanagement</option>
+            <option value="ISO 14001">ISO 14001 – Umweltmanagement</option>
+            <option value="ISO 45001">ISO 45001 – Arbeits- und Gesundheitsschutz</option>
+            <option value="DIN 77200">DIN 77200 – Sicherheitsdienstleistungen</option>
+            <option value="Integriertes Managementsystem">Integriertes Managementsystem</option>
+            <option value="Auditvorbereitung">Auditvorbereitung / internes Audit</option>
+            <option value="Unsicher">Noch unsicher – bitte beraten</option>
+          </select>
+          <span class="form-error" data-error-for="topic"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="status">Aktueller Projektstand</label>
+          <select id="status" name="status" required>
+            <option value="" disabled selected>Bitte auswählen</option>
+            <option value="Ganz am Anfang">Ganz am Anfang, keine Vorarbeit</option>
+            <option value="Erste Unterlagen vorhanden">Erste Prozesse/Dokumente vorhanden</option>
+            <option value="System vorhanden, soll erweitert werden">Bestehendes System soll erweitert werden</option>
+            <option value="Audittermin steht bereits fest">Audittermin steht bereits fest</option>
+          </select>
+          <span class="form-error" data-error-for="status"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="timeline">Gewünschter Zertifizierungszeitpunkt</label>
+          <select id="timeline" name="timeline" required>
+            <option value="" disabled selected>Bitte auswählen</option>
+            <option value="So schnell wie möglich">So schnell wie möglich</option>
+            <option value="3-6 Monate">In den nächsten 3–6 Monaten</option>
+            <option value="6-12 Monate">In 6–12 Monaten</option>
+            <option value="Offen">Zeitpunkt noch offen</option>
+          </select>
+          <span class="form-error" data-error-for="timeline"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="message">Ihre Nachricht</label>
+          <textarea id="message" name="message" required placeholder="Beschreiben Sie kurz Ihre Ausgangslage und Ihr Anliegen."></textarea>
+          <span class="form-error" data-error-for="message"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label class="form-consent" for="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>Ich habe die <a href="/datenschutz/">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Diese Einwilligung kann ich jederzeit für die Zukunft widerrufen.</span>
+          </label>
+          <span class="form-error" data-error-for="consent"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <button class="btn btn-primary" type="submit" data-form-submit>Anfrage senden</button>
+          <div class="form-status" data-form-status tabindex="-1"></div>
+        </div>
+      </form>
+
+      <div data-form-success hidden style="margin-top:1.5rem; padding:1.75rem; border-radius: var(--radius-md); background: var(--c-petrol-100); border: 1px solid rgba(21,100,109,0.25);">
+        <h3 style="font-size:1.1rem;">Vielen Dank für Ihre Anfrage.</h3>
+        <p style="margin-top:0.6rem; color: var(--c-ink-700);">Wir melden uns in der Regel innerhalb von zwei Werktagen bei Ihnen, um einen Termin für Ihr kostenloses Erstgespräch zu vereinbaren. Bei dringenden Anliegen erreichen Sie uns auch direkt telefonisch oder per E-Mail.</p>
+      </div>
+    </div>
+
+    <aside data-reveal>
+      <div style="background: var(--c-offwhite-200); border-radius: var(--radius-md); padding: 2rem; border: 1px solid var(--c-line);">
+        <h3 style="font-size:1.05rem;">Direkter Kontakt</h3>
+        <div class="contact-info-list" style="margin-top:1.5rem;">
+          <div class="contact-info-item">
+            <span class="contact-info-item__icon">{{ icon("phone", 20) }}</span>
+            <div><span>Telefon</span><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-item__icon">{{ icon("mail", 20) }}</span>
+            <div><span>E-Mail</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-item__icon">{{ icon("pin", 20) }}</span>
+            <div><span>Einsatzgebiet</span><span style="font-weight:600; color: var(--text-heading);">{{ site.serviceArea }}</span></div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-item__icon">{{ icon("clock", 20) }}</span>
+            <div><span>Rückmeldezeit</span><span style="font-weight:600; color: var(--text-heading);">In der Regel innerhalb von 2 Werktagen</span></div>
+          </div>
+        </div>
+        <hr class="divider-line" style="margin-block: 1.75rem;">
+        <h4 style="font-size:0.95rem;">So geht es nach Ihrer Anfrage weiter</h4>
+        <ol class="icon-list" style="margin-top:1rem; list-style:none;">
+          <li>{{ icon("check", 16) }}<span>Wir sichten Ihre Angaben und bereiten das Erstgespräch vor.</span></li>
+          <li>{{ icon("check", 16) }}<span>Wir vereinbaren gemeinsam einen Telefon- oder Video-Termin.</span></li>
+          <li>{{ icon("check", 16) }}<span>Im Gespräch klären wir Ziele, Normen und nächste Schritte.</span></li>
+        </ol>
+        <p class="placeholder-note" style="margin-top:1.5rem;">{{ icon("file", 14) }} Optional: Terminbuchungskalender (z. B. Cal.com/Calendly) kann hier eingebunden werden, sobald ein Anbieter final ausgewählt und datenschutzkonform eingerichtet ist.</p>
+      </div>
+    </aside>
+  </div>
+</section>

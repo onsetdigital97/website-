@@ -1,0 +1,130 @@
+---
+layout: layouts/base.njk
+title: "Auditvorbereitung & interne Audits – sicher durchs Zertifizierungsaudit"
+description: "Professionelle Auditvorbereitung und interne Audits: Abweichungen frühzeitig erkennen, Dokumentation prüfen und sicher durch das Zertifizierungsaudit gehen."
+bodyClass: "page-service"
+permalink: /leistungen/auditvorbereitung-interne-audits/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion %}
+{% from "partials/icons.njk" import icon %}
+
+{% set faqAudit = [
+  { question: "Was ist der Unterschied zwischen internem und externem Audit?", answer: "Das interne Audit führen wir gemeinsam mit Ihnen oder geschulten internen Mitarbeitenden durch, um die eigene Wirksamkeit zu prüfen. Das externe Zertifizierungsaudit wird von einer unabhängigen, akkreditierten Zertifizierungsstelle durchgeführt und führt zum Zertifikat." },
+  { question: "Wie kurzfristig kann eine Auditvorbereitung noch beginnen?", answer: "Auch bei einem kurzfristig bevorstehenden Audit lohnt sich eine fokussierte Vorbereitung. Wir priorisieren dann gezielt die Bereiche mit dem größten Risiko und Handlungsbedarf." },
+  { question: "Was passiert, wenn im internen Audit Abweichungen gefunden werden?", answer: "Das ist der eigentliche Zweck des internen Audits: Abweichungen frühzeitig zu erkennen, statt sie erst im Zertifizierungsaudit zu entdecken. Wir unterstützen Sie bei Ursachenanalyse und Korrekturmaßnahmen." },
+  { question: "Begleiten Sie uns auch direkt am Tag des Zertifizierungsaudits?", answer: "Ja, auf Wunsch sind wir am Audittag persönlich oder digital erreichbar, um kurzfristige Rückfragen zu klären und Sie fachlich zu unterstützen." }
+] %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Leistungen", url: "/leistungen/" }, { label: "Auditvorbereitung & interne Audits" }]) }}
+    <span class="eyebrow">Auditvorbereitung &amp; interne Audits</span>
+    <h1>Wirksamkeit prüfen, Abweichungen erkennen, sicher zertifizieren</h1>
+    <p class="page-hero__lede">Ob Erstzertifizierung oder Überwachungsaudit: Eine strukturierte interne Auditvorbereitung ist der entscheidende Schritt zwischen Dokumentation und Zertifikat. Wir prüfen Ihr System kritisch, bevor es die Zertifizierungsstelle tut.</p>
+    <div class="page-hero__meta">
+      <span class="tag-pill">{{ icon("check", 15) }} Frühzeitige Fehlererkennung</span>
+      <span class="tag-pill">{{ icon("clock", 15) }} Auch kurzfristig möglich</span>
+      <span class="tag-pill">{{ icon("shield", 15) }} Begleitung am Audittag</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Für wen relevant</span>
+      <h2>Typische Ausgangssituationen</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Ein Zertifizierungsaudit steht bevor, der Vorbereitungsstand ist unklar.</span></li>
+        <li>{{ icon("check", 18) }}<span>Interne Audits wurden bislang unregelmäßig oder unstrukturiert durchgeführt.</span></li>
+        <li>{{ icon("check", 18) }}<span>Ein Überwachungsaudit nach der Erstzertifizierung steht an.</span></li>
+        <li>{{ icon("check", 18) }}<span>Es fehlt intern die Erfahrung, Audits methodisch sauber durchzuführen.</span></li>
+        <li>{{ icon("check", 18) }}<span>Frühere Audits haben Abweichungen aufgezeigt, die nachhaltig behoben werden sollen.</span></li>
+      </ul>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Ziele &amp; Nutzen</span>
+      <h2>Warum interne Audits den Unterschied machen</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Ein gut durchgeführtes internes Audit deckt Schwachstellen auf, bevor sie im Zertifizierungsaudit zu Abweichungen führen. Es ist damit das wirksamste Instrument, um Überraschungen zu vermeiden und Ihr Team auf den Audittag vorzubereiten.</p>
+      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;">
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Frühzeitige Fehlererkennung</h3><p>Abweichungen werden intern statt extern sichtbar.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Weniger Stress am Audittag</h3><p>Das Team kennt die Abläufe bereits aus der Übung.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Belastbare Nachweise</h3><p>Auditprotokolle als Beleg für Wirksamkeit und Verbesserung.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Höhere Zertifizierungssicherheit</h3><p>Gezielte Vorbereitung statt Hoffen auf ein gutes Ergebnis.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Was wir prüfen</span>
+      <h2>Die zentralen Bausteine der Auditvorbereitung</h2>
+    </div>
+    <div class="grid grid-4" data-reveal-group>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Dokumentation</h3><p>Vollständigkeit, Aktualität und Nachvollziehbarkeit der Nachweise.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Prozessumsetzung</h3><p>Stimmen gelebte Abläufe mit der Dokumentation überein?</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Verantwortlichkeiten</h3><p>Sind Rollen im Team klar und nachvollziehbar zugeordnet?</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Vorherige Abweichungen</h3><p>Wurden frühere Korrekturmaßnahmen wirksam umgesetzt?</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Konkrete Leistungen rund um Audits</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Planung und Durchführung interner Audits nach Auditprogramm</span></li>
+        <li>{{ icon("check", 18) }}<span>Prüfung von Dokumentation, Nachweisen und Prozessumsetzung</span></li>
+        <li>{{ icon("check", 18) }}<span>Unterstützung bei Ursachenanalyse und Korrekturmaßnahmen</span></li>
+        <li>{{ icon("check", 18) }}<span>Simulation typischer Auditfragen mit den betroffenen Teams</span></li>
+        <li>{{ icon("check", 18) }}<span>Schulung interner Auditorinnen und Auditoren</span></li>
+        <li>{{ icon("check", 18) }}<span>Persönliche oder digitale Begleitung am Tag des Zertifizierungsaudits</span></li>
+      </ul>
+    </div>
+    <div class="numbered-mini" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Ablauf eines internen Audits</span>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Auditplanung</strong><p>Umfang, Termine und Verantwortliche festlegen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Dokumentenprüfung</strong><p>Nachweise vorab sichten und Auffälligkeiten notieren.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Vor-Ort-Audit</strong><p>Gespräche und Prozessbeobachtung in den Fachbereichen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Auditbericht</strong><p>Ergebnisse, Feststellungen und Abweichungen dokumentieren.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Korrekturmaßnahmen</strong><p>Ursachen klären und Maßnahmen nachverfolgen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Freigabe für das Zertifizierungsaudit</strong><p>Letzte Abstimmung vor dem externen Termin.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Relevant für alle Normen</span>
+      <h2>Auditvorbereitung für jede zertifizierte Norm</h2>
+    </div>
+    <div class="related-services center" style="justify-content:center;">
+      <a class="related-service-link" href="/leistungen/iso-9001/">{{ icon("target", 16) }} ISO 9001</a>
+      <a class="related-service-link" href="/leistungen/iso-14001/">{{ icon("leaf", 16) }} ISO 14001</a>
+      <a class="related-service-link" href="/leistungen/iso-45001/">{{ icon("shield", 16) }} ISO 45001</a>
+      <a class="related-service-link" href="/leistungen/din-77200/">{{ icon("lock", 16) }} DIN 77200</a>
+      <a class="related-service-link" href="/leistungen/integrierte-managementsysteme/">{{ icon("layers", 16) }} Integrierte Systeme</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Häufige Fragen zur Auditvorbereitung</span>
+      <h2>Fragen &amp; Antworten</h2>
+    </div>
+    {{ faqAccordion(faqAudit) }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Audittermin in Sicht – aber noch keine Gewissheit?", "Lassen Sie uns gemeinsam prüfen, wie weit Ihre Vorbereitung tatsächlich ist und was bis zum Audit noch sinnvoll umsetzbar ist.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Weitere Leistungen ansehen", "/leistungen/", true) }}
+  </div>
+</section>

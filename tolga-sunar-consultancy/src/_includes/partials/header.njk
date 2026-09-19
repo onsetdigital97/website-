@@ -1,0 +1,58 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/">
+      <span class="brand__mark" aria-hidden="true">TS</span>
+      <span class="brand__text">
+        <span class="brand__name">Tolga Sunar</span>
+        <span class="brand__sub">Consultancy</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <ul class="main-nav__list">
+        {% for item in site.primaryNav %}
+        <li class="{% if item.hasChildren %}has-dropdown{% endif %}">
+          <a class="main-nav__link" href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>
+            {{ item.label }}
+            {% if item.hasChildren %}
+            <svg class="dropdown-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% endif %}
+          </a>
+          {% if item.hasChildren %}
+          <div class="dropdown">
+            {% for sub in site.leistungenNav %}
+            <a class="dropdown__link" href="{{ sub.url }}">{{ sub.label }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="/kontakt/">Kostenloses Erstgespräch</a>
+      <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        <span class="nav-toggle__box"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    {% for item in site.primaryNav %}
+    <li>
+      <a class="mobile-nav__link" href="{{ item.url }}">{{ item.label }}</a>
+      {% if item.hasChildren %}
+      <ul class="mobile-nav__sublist">
+        {% for sub in site.leistungenNav %}
+        <li><a class="mobile-nav__link" href="{{ sub.url }}">{{ sub.label }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  <a class="btn btn-primary btn-block mobile-nav__cta" href="/kontakt/">Kostenloses Erstgespräch</a>
+</div>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:locale" content="{{ site.locale }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+
+  <meta name="theme-color" content="#0c1526">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  {% if schema %}
+  <script type="application/ld+json">{{ schema | safe }}</script>
+  {% endif %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "description": "Beratung für ISO-Zertifizierungen und integrierte Managementsysteme für kleine und mittelständische Unternehmen im DACH-Raum.",
+    "areaServed": ["DE", "AT", "CH"],
+    "priceRange": "Auf Anfrage",
+    "founder": {
+      "@type": "Person",
+      "name": "{{ site.consultantName }}"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.addressStreet }}",
+      "addressLocality": "{{ site.addressZipCity }}",
+      "addressCountry": "DE"
+    },
+    "email": "{{ site.email }}",
+    "knowsAbout": ["ISO 9001", "ISO 14001", "ISO 45001", "DIN 77200", "Integrierte Managementsysteme", "Interne Audits"]
+  }
+  </script>
+</head>
+<body class="{{ bodyClass }}">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

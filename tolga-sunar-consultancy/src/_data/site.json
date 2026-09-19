@@ -1,0 +1,40 @@
+{
+  "name": "Tolga Sunar Consultancy",
+  "shortName": "Tolga Sunar Consultancy",
+  "consultantName": "Tolga Sunar",
+  "claim": "Managementsysteme, die auditsicher sind – und im Alltag funktionieren.",
+  "url": "https://www.tolgasunarconsultancy.com",
+  "locale": "de_DE",
+  "language": "de",
+  "email": "info@tolgasunarconsultancy.com",
+  "phone": "[Platzhalter: Telefonnummer ergänzen]",
+  "phoneHref": "#",
+  "addressStreet": "[Platzhalter: Straße und Hausnummer]",
+  "addressZipCity": "[Platzhalter: PLZ und Ort]",
+  "addressRegion": "[Platzhalter: Region, z. B. Bayern]",
+  "addressCountry": "Deutschland",
+  "serviceArea": "DACH-Raum (Deutschland, Österreich, Schweiz)",
+  "legalForm": "[Platzhalter: Rechtsform, z. B. Einzelunternehmen / GmbH]",
+  "linkedin": "[Platzhalter: LinkedIn-Profil-URL]",
+  "primaryNav": [
+    { "label": "Leistungen", "url": "/leistungen/", "hasChildren": true },
+    { "label": "Vorgehensweise", "url": "/#vorgehensweise" },
+    { "label": "Über uns", "url": "/ueber-uns/" },
+    { "label": "Referenzen", "url": "/referenzen/" },
+    { "label": "FAQ", "url": "/faq/" },
+    { "label": "Kontakt", "url": "/kontakt/" }
+  ],
+  "leistungenNav": [
+    { "label": "Leistungen im Überblick", "url": "/leistungen/" },
+    { "label": "ISO 9001 – Qualitätsmanagement", "url": "/leistungen/iso-9001/" },
+    { "label": "ISO 14001 – Umweltmanagement", "url": "/leistungen/iso-14001/" },
+    { "label": "ISO 45001 – Arbeits- und Gesundheitsschutz", "url": "/leistungen/iso-45001/" },
+    { "label": "DIN 77200 – Sicherheitsdienstleistungen", "url": "/leistungen/din-77200/" },
+    { "label": "Integrierte Managementsysteme", "url": "/leistungen/integrierte-managementsysteme/" },
+    { "label": "Auditvorbereitung & interne Audits", "url": "/leistungen/auditvorbereitung-interne-audits/" }
+  ],
+  "footerLegalNav": [
+    { "label": "Impressum", "url": "/impressum/" },
+    { "label": "Datenschutz", "url": "/datenschutz/" }
+  ]
+}

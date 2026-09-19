@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: "FAQ – Häufige Fragen zur ISO-Beratung"
+description: "Antworten auf häufige Fragen zu ISO-Zertifizierung, Ablauf, Kosten, Förderung und Auditvorbereitung – von Tolga Sunar Consultancy."
+bodyClass: "page-faq"
+permalink: /faq/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "FAQ" }]) }}
+    <span class="eyebrow">Häufige Fragen</span>
+    <h1>Antworten auf die Fragen, die uns am häufigsten gestellt werden</h1>
+    <p class="page-hero__lede">Sollte Ihre Frage hier nicht beantwortet sein, klären wir sie gerne persönlich im kostenlosen Erstgespräch.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    {{ faqAccordion(faqGlobal) }}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    {{ ctaBanner("Noch offene Fragen?", "Sprechen wir direkt darüber.", "Im kostenlosen Erstgespräch beantworten wir alle offenen Fragen zu Ihrem konkreten Vorhaben.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", null, null, true) }}
+  </div>
+</section>

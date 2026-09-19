@@ -1,0 +1,54 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" style="color: var(--c-white);">
+          <span class="brand__mark" aria-hidden="true">TS</span>
+          <span class="brand__text">
+            <span class="brand__name" style="color: var(--c-white);">Tolga Sunar</span>
+            <span class="brand__sub" style="color: var(--c-bronze-300);">Consultancy</span>
+          </span>
+        </a>
+        <p>Beratung für ISO-Zertifizierungen und integrierte Managementsysteme – persönlich, strukturiert und auditsicher.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          {% for sub in site.leistungenNav %}
+          <li><a href="{{ sub.url }}">{{ sub.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="/ueber-uns/">Über uns</a></li>
+          <li><a href="/referenzen/">Referenzen</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/ratgeber/">Ratgeber</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></li>
+          <li>{{ site.serviceArea }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {% year %} {{ site.name }}. Alle Rechte vorbehalten.</span>
+      <div style="display:flex; gap:1.5rem;">
+        {% for item in site.footerLegalNav %}
+        <a href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>

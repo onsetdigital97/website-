@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+title: "Welche ISO-Norm passt zu meinem Unternehmen? Ein Überblick"
+description: "ISO 9001, ISO 14001, ISO 45001 oder DIN 77200: Ein praxisnaher Überblick, welche Norm für welches Unternehmen relevant ist – und wann sich eine Kombination lohnt."
+bodyClass: "page-article"
+permalink: /ratgeber/welche-iso-norm-passt-zu-meinem-unternehmen/
+tags: ["ratgeber"]
+date: 2026-01-15
+excerpt: "Ein praxisnaher Überblick, welche ISO-Norm für welches Unternehmen relevant ist – und wann sich eine Kombination lohnt."
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner %}
+{% from "partials/icons.njk" import icon %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Ratgeber", url: "/ratgeber/" }, { label: "Welche ISO-Norm passt zu meinem Unternehmen?" }]) }}
+    <span class="eyebrow">Ratgeber</span>
+    <h1>Welche ISO-Norm passt zu meinem Unternehmen?</h1>
+    <p class="page-hero__lede">{{ excerpt }}</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow legal-content">
+    <p>Für Unternehmen, die zum ersten Mal über eine Zertifizierung nachdenken, ist die Normlandschaft oft unübersichtlich. Dieser Überblick ordnet die vier für kleine und mittelständische Unternehmen relevantesten Regelwerke ein.</p>
+
+    <h2>ISO 9001 – wenn Qualität im Mittelpunkt steht</h2>
+    <p>ISO 9001 ist branchenunabhängig einsetzbar und in der Praxis der häufigste Einstieg in ein Managementsystem. Relevant ist die Norm insbesondere, wenn Kunden einen Qualitätsnachweis fordern, Reklamationen reduziert werden sollen oder Prozesse durch Wachstum unübersichtlich geworden sind.</p>
+
+    <h2>ISO 14001 – wenn Umweltverantwortung nachweisbar werden soll</h2>
+    <p>ISO 14001 lohnt sich für Unternehmen, deren Tätigkeit spürbare Umweltauswirkungen hat – etwa durch Energieverbrauch, Emissionen oder Abfallaufkommen – oder deren Kunden und Ausschreibungen einen Umweltnachweis verlangen.</p>
+
+    <h2>ISO 45001 – wenn Arbeitssicherheit strukturiert gesteuert werden soll</h2>
+    <p>ISO 45001 ist besonders für produzierende Unternehmen, das Handwerk und personalintensive Branchen relevant, in denen Arbeitsunfälle und Gesundheitsrisiken eine reale Rolle spielen.</p>
+
+    <h2>DIN 77200 – für professionelle Sicherheitsdienstleister</h2>
+    <p>Sicherheitsdienstleister benötigen die DIN 77200 häufig, um bei Ausschreibungen – insbesondere im öffentlichen Bereich – überhaupt berücksichtigt zu werden. Die Norm regelt Anforderungen an Personal, Einsatzplanung und Nachweisführung.</p>
+
+    <h2>Und wenn mehrere Normen relevant sind?</h2>
+    <p>In der Praxis ist häufig nicht eine einzelne Norm, sondern eine Kombination sinnvoll. Da die meisten ISO-Managementsystemnormen derselben High-Level-Structure folgen, lassen sie sich zu einem integrierten Managementsystem zusammenführen – mit einer gemeinsamen Dokumentation statt paralleler Einzelsysteme.</p>
+
+    <p>Welche Norm oder Kombination für Ihr Unternehmen die richtige ist, hängt von Branche, Kundenanforderungen und strategischen Zielen ab. Im kostenlosen Erstgespräch ordnen wir Ihre konkrete Situation ein.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Unsicher, welche Norm zu Ihnen passt?", "Wir ordnen Ihre Ausgangslage im kostenlosen Erstgespräch fachlich ein.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Alle Leistungen ansehen", "/leistungen/", true) }}
+  </div>
+</section>

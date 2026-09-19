@@ -1,0 +1,129 @@
+---
+layout: layouts/base.njk
+title: "DIN 77200 Beratung – Zertifizierung für Sicherheitsdienstleister"
+description: "DIN 77200 Beratung für Sicherheitsdienstleister: Anforderungen der Sicherheitsstufen erfüllen, Prozesse dokumentieren und die Zertifizierung sicher vorbereiten."
+bodyClass: "page-service"
+permalink: /leistungen/din-77200/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion %}
+{% from "partials/icons.njk" import icon %}
+
+{% set faqDin77200 = [
+  { question: "Was regelt die DIN 77200?", answer: "Die DIN 77200 definiert Anforderungen an Sicherheitsdienstleistungen in unterschiedlichen Sicherheitsstufen – von der Personalauswahl über die Einsatzplanung bis zur Dokumentation von Wach- und Sicherungsleistungen." },
+  { question: "Ist DIN 77200 für alle Sicherheitsdienstleister verpflichtend?", answer: "Eine Zertifizierung ist nicht generell gesetzlich vorgeschrieben, wird jedoch bei vielen Ausschreibungen – etwa im öffentlichen Bereich oder bei kritischen Infrastrukturen – als Voraussetzung oder Bewertungskriterium verlangt." },
+  { question: "Welche Sicherheitsstufe ist für uns relevant?", answer: "Das hängt vom Einsatzgebiet und den Anforderungen Ihrer Auftraggeber ab. Im Erstgespräch ordnen wir gemeinsam ein, welche Stufe zu Ihrem Leistungsportfolio passt." },
+  { question: "Lässt sich DIN 77200 mit ISO-Normen kombinieren?", answer: "Ja, insbesondere die Kombination mit ISO 9001 und ISO 45001 ist für Sicherheitsdienstleister sinnvoll, da sich Qualitäts-, Prozess- und Arbeitsschutzanforderungen ergänzen." }
+] %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Leistungen", url: "/leistungen/" }, { label: "DIN 77200" }]) }}
+    <span class="eyebrow">DIN 77200 – Sicherheitsdienstleistungen</span>
+    <h1>Nachweisbare Qualitätsstandards für professionelle Sicherheitsdienstleister</h1>
+    <p class="page-hero__lede">Die DIN 77200 legt fest, welche Anforderungen professionelle Sicherheitsdienstleistungen erfüllen müssen. Wir unterstützen Sie dabei, Prozesse, Personal- und Einsatzdokumentation normgerecht aufzubauen und die Zertifizierung sicher zu erreichen.</p>
+    <div class="page-hero__meta">
+      <span class="tag-pill">{{ icon("lock", 15) }} Sicherheitsdienstleistungen</span>
+      <span class="tag-pill">{{ icon("check", 15) }} Ausschreibungsrelevant</span>
+      <span class="tag-pill">{{ icon("layers", 15) }} Kombinierbar mit ISO 45001</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Für wen relevant</span>
+      <h2>Typische Ausgangssituationen</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Ausschreibungen, insbesondere im öffentlichen Bereich, verlangen eine DIN-77200-Zertifizierung.</span></li>
+        <li>{{ icon("check", 18) }}<span>Personalauswahl, Einsatzplanung und Nachweisführung sind nicht einheitlich dokumentiert.</span></li>
+        <li>{{ icon("check", 18) }}<span>Auftraggeber im Bereich kritischer Infrastrukturen fordern belastbare Qualitätsnachweise.</span></li>
+        <li>{{ icon("check", 18) }}<span>Das Unternehmen möchte sich gegenüber weniger strukturierten Wettbewerbern differenzieren.</span></li>
+      </ul>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Ziele &amp; Nutzen</span>
+      <h2>Was Sie mit DIN 77200 erreichen</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Eine Zertifizierung nach DIN 77200 macht Ihre Leistungsfähigkeit als Sicherheitsdienstleister nachvollziehbar und belastbar – gegenüber Auftraggebern, Ausschreibungsstellen und im eigenen Qualitätsmanagement.</p>
+      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;">
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Ausschreibungsfähigkeit</h3><p>Erfüllung eines häufig geforderten Vergabekriteriums.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Nachvollziehbare Personalprozesse</h3><p>Auswahl, Qualifikation und Einsatz klar dokumentiert.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Höhere Auftraggeber-Sicherheit</h3><p>Belastbare Nachweise statt bloßer Zusagen.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Differenzierung im Wettbewerb</h3><p>Sichtbarer Qualitätsvorsprung am Markt.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Anforderungen verständlich erklärt</span>
+      <h2>Was DIN 77200 von Ihrem Unternehmen erwartet</h2>
+      <p>Die zentralen Bausteine – nachvollziehbar erklärt.</p>
+    </div>
+    <div class="grid grid-4" data-reveal-group>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Personalqualifikation</h3><p>Nachweisbare Auswahl, Schulung und Eignung des eingesetzten Personals.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Einsatzplanung</h3><p>Nachvollziehbare Planung und Steuerung der Sicherheitsdienstleistungen.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Dokumentation &amp; Nachweise</h3><p>Lückenlose Dokumentation von Einsätzen entsprechend der Sicherheitsstufe.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Qualitätssicherung</h3><p>Regelmäßige Überprüfung und Verbesserung der Leistungserbringung.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Konkrete Beratungsleistungen für Ihre DIN-77200-Zertifizierung</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Einordnung der für Sie relevanten Sicherheitsstufe</span></li>
+        <li>{{ icon("check", 18) }}<span>Aufbau normgerechter Personal- und Einsatzdokumentation</span></li>
+        <li>{{ icon("check", 18) }}<span>Entwicklung von Nachweis- und Kontrollprozessen</span></li>
+        <li>{{ icon("check", 18) }}<span>Schulung von Führungskräften und Einsatzverantwortlichen</span></li>
+        <li>{{ icon("check", 18) }}<span>Internes Audit und Begleitung des Zertifizierungsaudits</span></li>
+      </ul>
+    </div>
+    <div class="numbered-mini" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Einordnung</strong><p>Relevante Sicherheitsstufe und Ziele klären.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Gap-Analyse</strong><p>Bestehende Prozesse mit Normanforderungen abgleichen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Konzeption &amp; Dokumentation</strong><p>Personal-, Einsatz- und Nachweisprozesse erarbeiten.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung &amp; Schulung</strong><p>Führungskräfte und Einsatzteams befähigen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit und Nachweisführung prüfen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Zertifizierungsaudit</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Normkombination</span>
+      <h2>DIN 77200 sinnvoll kombinieren</h2>
+      <p>Besonders wirkungsvoll in Verbindung mit Qualitäts- und Arbeitsschutzmanagement.</p>
+    </div>
+    <div class="related-services center" style="justify-content:center;">
+      <a class="related-service-link" href="/leistungen/iso-9001/">{{ icon("target", 16) }} ISO 9001 – Qualitätsmanagement</a>
+      <a class="related-service-link" href="/leistungen/iso-45001/">{{ icon("shield", 16) }} ISO 45001 – Arbeitsschutz</a>
+      <a class="related-service-link" href="/leistungen/integrierte-managementsysteme/">{{ icon("layers", 16) }} Integrierte Managementsysteme</a>
+      <a class="related-service-link" href="/leistungen/auditvorbereitung-interne-audits/">{{ icon("check", 16) }} Auditvorbereitung</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Häufige Fragen zu DIN 77200</span>
+      <h2>Fragen &amp; Antworten</h2>
+    </div>
+    {{ faqAccordion(faqDin77200) }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Bereit für eine nachweisbare Qualitätsstufe?", "Lassen Sie uns besprechen, welche Sicherheitsstufe und welcher Zeitplan zu Ihrem Unternehmen passen.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Weitere Leistungen ansehen", "/leistungen/", true) }}
+  </div>
+</section>

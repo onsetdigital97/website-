@@ -1,0 +1,73 @@
+---
+layout: layouts/base.njk
+title: "Datenschutzerklärung"
+description: "Datenschutzerklärung von Tolga Sunar Consultancy gemäß DSGVO."
+bodyClass: "page-legal"
+permalink: /datenschutz/
+noindex: true
+---
+{% from "partials/macros.njk" import breadcrumbs %}
+
+<section class="page-hero" style="padding-block: 3rem 3rem;">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Datenschutz" }]) }}
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Datenschutzerklärung</h1>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow legal-content">
+
+    <p class="placeholder-note" style="margin-top:0; margin-bottom:1.5rem;">Hinweis: Mit <span class="placeholder-flag">Platzhalter</span> gekennzeichnete Angaben sind vor Veröffentlichung zu vervollständigen. Diese Erklärung ist zusätzlich an den final eingesetzten Formular-Backend-Dienstleister und ggf. Hosting-Anbieter anzupassen.</p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:<br>
+      {{ site.consultantName }}, {{ site.name }}<br>
+      {{ site.addressStreet }}, {{ site.addressZipCity }}<br>
+      E-Mail: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+      Telefon: {{ site.phone }}
+    </p>
+
+    <h2>2. Allgemeines zur Datenverarbeitung</h2>
+    <p>Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung erfolgt regelmäßig nur nach Einwilligung des Nutzers oder auf Grundlage einer gesetzlichen Erlaubnis (Art. 6 Abs. 1 DSGVO).</p>
+
+    <h2>3. Hosting und Server-Logfiles</h2>
+    <p>Beim Aufruf dieser Website erhebt der Hosting-Anbieter automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt. Dies sind: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Diese Daten werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren und stabilen Betrieb der Website). Hosting-Anbieter: <span class="placeholder-flag">Platzhalter – Anbieter und Serverstandort ergänzen</span>.</p>
+
+    <h2>4. Cookies und Tracking</h2>
+    <p>Diese Website setzt zum aktuellen Zeitpunkt keine Cookies oder Tracking- und Analysewerkzeuge ein, die eine Einwilligung nach § 25 TTDSG erfordern. Es werden ausschließlich technisch notwendige Vorgänge zum Betrieb der Website durchgeführt. Sollten künftig Dienste wie Web-Analyse, Kartenintegrationen oder Terminbuchungssysteme eingebunden werden, wird diese Datenschutzerklärung entsprechend ergänzt und – soweit erforderlich – ein Consent-Management-Tool zur Einholung Ihrer Einwilligung vor dem Laden der jeweiligen Dienste implementiert.</p>
+
+    <h2>5. Kontaktaufnahme über das Kontaktformular</h2>
+    <p>Wenn Sie uns über das Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+    <p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) beziehungsweise, sofern die Anfrage auf den Abschluss eines Vertrags gerichtet ist, zur Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO). Die Einwilligung zur Verarbeitung der Daten können Sie jederzeit widerrufen, etwa per E-Mail an {{ site.email }}. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+    <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen – insbesondere steuer- und handelsrechtliche Aufbewahrungsfristen – bleiben unberührt.</p>
+    <p><span class="placeholder-flag">Platzhalter</span> Der technische Formular-Versand erfolgt über: [Anbieter/Backend des Kontaktformulars ergänzen, z. B. eigener Server oder Formular-Dienstleister mit Auftragsverarbeitungsvertrag].</p>
+
+    <h2>6. Ihre Rechte als betroffene Person</h2>
+    <ul>
+      <li>Recht auf Auskunft über die zu Ihrer Person gespeicherten Daten (Art. 15 DSGVO)</li>
+      <li>Recht auf Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO)</li>
+      <li>Recht auf Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschränkung der Datenverarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruchsrecht gegen die Verarbeitung Ihrer Daten (Art. 21 DSGVO)</li>
+      <li>Recht auf Widerruf erteilter Einwilligungen mit Wirkung für die Zukunft</li>
+      <li>Recht auf Beschwerde bei einer Aufsichtsbehörde</li>
+    </ul>
+
+    <h2>7. Zuständige Aufsichtsbehörde</h2>
+    <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Zuständige Aufsichtsbehörde: <span class="placeholder-flag">Platzhalter – zuständige Landesdatenschutzbehörde je nach Unternehmenssitz ergänzen</span>.</p>
+
+    <h2>8. SSL- bzw. TLS-Verschlüsselung</h2>
+    <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+
+    <h2>9. Keine automatisierte Entscheidungsfindung</h2>
+    <p>Wir setzen keine automatisierte Entscheidungsfindung oder ein Profiling im Sinne von Art. 22 DSGVO ein.</p>
+
+    <h2>10. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+    <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand <span class="placeholder-flag">Platzhalter – Datum der finalen Veröffentlichung ergänzen</span>. Durch die Weiterentwicklung der Website und Angebote darüber oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
+
+  </div>
+</section>

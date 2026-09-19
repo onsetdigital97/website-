@@ -1,0 +1,123 @@
+---
+layout: layouts/base.njk
+title: "Integrierte Managementsysteme – ISO 9001, 14001, 45001 kombiniert"
+description: "Integriertes Managementsystem aus ISO 9001, ISO 14001 und ISO 45001: eine gemeinsame Dokumentation, ein Auditzyklus, weniger Pflegeaufwand. Beratung von Tolga Sunar Consultancy."
+bodyClass: "page-service"
+permalink: /leistungen/integrierte-managementsysteme/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion %}
+{% from "partials/icons.njk" import icon %}
+
+{% set faqIms = [
+  { question: "Was genau ist ein integriertes Managementsystem?", answer: "Ein integriertes Managementsystem (IMS) bündelt die Anforderungen mehrerer Normen – etwa ISO 9001, ISO 14001 und ISO 45001 – in einer gemeinsamen Struktur, statt für jede Norm ein eigenständiges Einzelsystem zu pflegen." },
+  { question: "Warum funktioniert das technisch so gut?", answer: "Die meisten ISO-Managementsystemnormen folgen der sogenannten High-Level-Structure – einem einheitlichen Kapitelaufbau. Dadurch lassen sich Kontext, Führung, Planung, Unterstützung, Betrieb, Bewertung und Verbesserung normübergreifend gemeinsam gestalten." },
+  { question: "Müssen wir alle Normen gleichzeitig einführen?", answer: "Nein. Viele Unternehmen starten mit einer Norm und erweitern das System später gezielt. Wir konzipieren die Struktur von Anfang an so, dass eine spätere Erweiterung ohne Neuaufbau möglich ist." },
+  { question: "Ist ein integriertes System auch für kleinere Unternehmen sinnvoll?", answer: "Gerade für kleinere Unternehmen mit begrenzten internen Kapazitäten ist ein integriertes System oft die effizientere Lösung, da doppelte Dokumentation und parallele Auditprozesse entfallen." }
+] %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Leistungen", url: "/leistungen/" }, { label: "Integrierte Managementsysteme" }]) }}
+    <span class="eyebrow">Integrierte Managementsysteme</span>
+    <h1>Mehrere Normen, eine gemeinsame und wirksame Struktur</h1>
+    <p class="page-hero__lede">Statt mehrere Managementsysteme parallel und unabhängig voneinander zu betreiben, verbinden wir Ihre relevanten Normen zu einem gemeinsamen, integrierten System – mit einer Dokumentation, einem Auditzyklus und klaren Verantwortlichkeiten.</p>
+    <div class="page-hero__meta">
+      <span class="tag-pill">{{ icon("layers", 15) }} ISO 9001 · 14001 · 45001</span>
+      <span class="tag-pill">{{ icon("check", 15) }} Weniger Pflegeaufwand</span>
+      <span class="tag-pill">{{ icon("compass", 15) }} Erweiterbar</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Warum integrieren</span>
+      <h2>Der Unterschied zwischen Einzelsystemen und einem IMS</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Viele Unternehmen führen Managementsysteme nacheinander ein – mit jeweils eigenem Handbuch, eigenen Verfahren und eigenem Auditrhythmus. Das Ergebnis sind doppelte Strukturen, widersprüchliche Zuständigkeiten und ein hoher Pflegeaufwand. Ein integriertes System löst diese Redundanz auf, ohne die fachliche Tiefe der einzelnen Normen zu verlieren.</p>
+      <div class="integration-benefits" style="margin-top:1.75rem;">
+        <div class="integration-benefit"><span class="integration-benefit__check">{{ icon("check", 16) }}</span><div><strong>Weniger doppelte Prozesse</strong><span>Ein gemeinsamer Prozessrahmen statt normspezifischer Insellösungen.</span></div></div>
+        <div class="integration-benefit"><span class="integration-benefit__check">{{ icon("check", 16) }}</span><div><strong>Gemeinsame Dokumentation</strong><span>Ein Managementhandbuch, eine Dokumentenlenkung.</span></div></div>
+        <div class="integration-benefit"><span class="integration-benefit__check">{{ icon("check", 16) }}</span><div><strong>Klarere Verantwortlichkeiten</strong><span>Rollen sind normübergreifend eindeutig zugeordnet.</span></div></div>
+        <div class="integration-benefit"><span class="integration-benefit__check">{{ icon("check", 16) }}</span><div><strong>Geringerer Pflegeaufwand</strong><span>Ein Auditzyklus statt mehrerer paralleler Termine.</span></div></div>
+        <div class="integration-benefit"><span class="integration-benefit__check">{{ icon("check", 16) }}</span><div><strong>Bessere Skalierbarkeit</strong><span>Weitere Normen lassen sich strukturiert ergänzen.</span></div></div>
+      </div>
+    </div>
+    <div class="integration-diagram" data-reveal>
+      {% include "partials/integration-svg.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Gemeinsame Struktur</span>
+      <h2>Was in einem integrierten System zusammengeführt wird</h2>
+      <p>Die High-Level-Structure bildet den gemeinsamen Rahmen aller relevanten ISO-Managementsystemnormen.</p>
+    </div>
+    <div class="grid grid-4" data-reveal-group>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Kontext &amp; Führung</h3><p>Ein gemeinsames Verständnis von Organisation, Stakeholdern und Verantwortung.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Planung &amp; Risiken</h3><p>Risiken und Chancen werden themenübergreifend bewertet.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Betrieb &amp; Dokumentation</h3><p>Ein Dokumentenlenkungssystem für alle integrierten Bereiche.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Bewertung &amp; Verbesserung</h3><p>Ein gemeinsamer Audit- und Managementbewertungszyklus.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>So begleiten wir Ihr integriertes Managementsystem</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Analyse, welche Normen für Ihr Unternehmen sinnvoll kombinierbar sind</span></li>
+        <li>{{ icon("check", 18) }}<span>Entwicklung einer gemeinsamen Prozess- und Dokumentationsstruktur</span></li>
+        <li>{{ icon("check", 18) }}<span>Zusammenführung bestehender Einzelsysteme, sofern bereits vorhanden</span></li>
+        <li>{{ icon("check", 18) }}<span>Konzeption eines gemeinsamen internen Auditprogramms</span></li>
+        <li>{{ icon("check", 18) }}<span>Schulung der intern Verantwortlichen für alle integrierten Bereiche</span></li>
+        <li>{{ icon("check", 18) }}<span>Begleitung der kombinierten Zertifizierungsaudits</span></li>
+      </ul>
+    </div>
+    <div class="numbered-mini" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Normauswahl</strong><p>Relevante Normkombination festlegen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Gap-Analyse je Norm</strong><p>Gemeinsame und normspezifische Lücken identifizieren.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Integrierte Konzeption</strong><p>Ein Handbuch, gemeinsame Prozesse und Vorlagen erarbeiten.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung &amp; Schulung</strong><p>System normübergreifend im Unternehmen verankern.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit über alle Normen hinweg prüfen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Kombinierte Zertifizierung</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Einzelnormen im integrierten System</span>
+      <h2>Die Bausteine im Detail</h2>
+    </div>
+    <div class="related-services center" style="justify-content:center;">
+      <a class="related-service-link" href="/leistungen/iso-9001/">{{ icon("target", 16) }} ISO 9001 – Qualitätsmanagement</a>
+      <a class="related-service-link" href="/leistungen/iso-14001/">{{ icon("leaf", 16) }} ISO 14001 – Umweltmanagement</a>
+      <a class="related-service-link" href="/leistungen/iso-45001/">{{ icon("shield", 16) }} ISO 45001 – Arbeitsschutz</a>
+      <a class="related-service-link" href="/leistungen/din-77200/">{{ icon("lock", 16) }} DIN 77200 – Sicherheitsdienstleistungen</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Häufige Fragen zu integrierten Systemen</span>
+      <h2>Fragen &amp; Antworten</h2>
+    </div>
+    {{ faqAccordion(faqIms) }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Mehrere Normen im Blick – aber noch keine gemeinsame Struktur?", "Lassen Sie uns besprechen, wie sich Ihre Normen sinnvoll zu einem integrierten System verbinden lassen.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Weitere Leistungen ansehen", "/leistungen/", true) }}
+  </div>
+</section>

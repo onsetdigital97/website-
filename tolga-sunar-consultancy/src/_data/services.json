@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "iso-9001",
+    "shortTitle": "ISO 9001",
+    "title": "ISO 9001 – Qualitätsmanagement",
+    "teaser": "Qualität systematisch sichern, Prozesse verbessern und Kundenzufriedenheit strukturell stärken.",
+    "url": "/leistungen/iso-9001/",
+    "icon": "target"
+  },
+  {
+    "slug": "iso-14001",
+    "shortTitle": "ISO 14001",
+    "title": "ISO 14001 – Umweltmanagement",
+    "teaser": "Umweltwirkungen reduzieren, gesetzliche Anforderungen erfüllen und Ressourcen bewusster einsetzen.",
+    "url": "/leistungen/iso-14001/",
+    "icon": "leaf"
+  },
+  {
+    "slug": "iso-45001",
+    "shortTitle": "ISO 45001",
+    "title": "ISO 45001 – Arbeits- und Gesundheitsschutz",
+    "teaser": "Arbeitsrisiken strukturiert reduzieren und nachweisbar sichere Arbeitsbedingungen etablieren.",
+    "url": "/leistungen/iso-45001/",
+    "icon": "shield"
+  },
+  {
+    "slug": "din-77200",
+    "shortTitle": "DIN 77200",
+    "title": "DIN 77200 – Sicherheitsdienstleistungen",
+    "teaser": "Nachweisbare Qualitäts- und Leistungsstandards für professionelle Sicherheitsdienstleister aufbauen.",
+    "url": "/leistungen/din-77200/",
+    "icon": "lock"
+  },
+  {
+    "slug": "integrierte-managementsysteme",
+    "shortTitle": "Integrierte Systeme",
+    "title": "Integrierte Managementsysteme",
+    "teaser": "Mehrere Normen sinnvoll verbinden – eine gemeinsame Struktur statt paralleler Einzelsysteme.",
+    "url": "/leistungen/integrierte-managementsysteme/",
+    "icon": "layers"
+  },
+  {
+    "slug": "auditvorbereitung-interne-audits",
+    "shortTitle": "Auditvorbereitung",
+    "title": "Auditvorbereitung & interne Audits",
+    "teaser": "Wirksamkeit prüfen, Abweichungen früh erkennen und sicher durch das Zertifizierungsaudit gehen.",
+    "url": "/leistungen/auditvorbereitung-interne-audits/",
+    "icon": "check"
+  }
+]

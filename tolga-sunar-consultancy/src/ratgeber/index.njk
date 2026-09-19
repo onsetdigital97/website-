@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: "Ratgeber – Wissen rund um ISO-Zertifizierung"
+description: "Praxisnahe Beiträge zu ISO-Zertifizierung, Auditvorbereitung und Managementsystemen für kleine und mittelständische Unternehmen."
+bodyClass: "page-ratgeber"
+permalink: /ratgeber/
+---
+{% from "partials/macros.njk" import breadcrumbs %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Ratgeber" }]) }}
+    <span class="eyebrow">Ratgeber</span>
+    <h1>Wissen rund um ISO-Zertifizierung und Managementsysteme</h1>
+    <p class="page-hero__lede">Praxisnahe Hintergrundartikel für Geschäftsführung und Qualitätsverantwortliche – unabhängig von einem laufenden Beratungsprojekt.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="grid grid-3" data-reveal-group>
+      {% for post in collections.ratgeber %}
+      <a class="knowledge-card" href="{{ post.url }}">
+        <div class="knowledge-card__media"></div>
+        <div class="knowledge-card__body">
+          <span class="knowledge-card__tag">Ratgeber</span>
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.excerpt }}</p>
+          <span class="knowledge-card__meta">{{ post.date | readableDate }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

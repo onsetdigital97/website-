@@ -1,0 +1,14 @@
+{
+  "name": "tolga-sunar-consultancy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website von Tolga Sunar Consultancy – Beratung für ISO-Zertifizierungen und integrierte Managementsysteme.",
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

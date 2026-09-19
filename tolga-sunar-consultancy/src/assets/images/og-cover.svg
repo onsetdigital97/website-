@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c1526"/>
+  <defs>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="1000" cy="120" r="260" fill="rgba(28,124,134,0.25)"/>
+  <rect x="90" y="250" width="64" height="64" rx="14" fill="#faf8f4"/>
+  <text x="122" y="294" font-family="Georgia, serif" font-size="26" fill="#0c1526" text-anchor="middle">TS</text>
+  <text x="90" y="380" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#faf8f4">Tolga Sunar Consultancy</text>
+  <text x="90" y="425" font-family="Arial, sans-serif" font-size="24" fill="#d9c49c">ISO-Zertifizierung &amp; integrierte Managementsysteme</text>
+</svg>

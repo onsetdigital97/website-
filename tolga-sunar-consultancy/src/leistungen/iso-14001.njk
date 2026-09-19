@@ -1,0 +1,131 @@
+---
+layout: layouts/base.njk
+title: "ISO 14001 Beratung – Umweltmanagement für KMU"
+description: "ISO 14001 Beratung: Umweltmanagementsystem aufbauen, gesetzliche Anforderungen erfüllen und Umweltwirkungen reduzieren – begleitet von Tolga Sunar Consultancy."
+bodyClass: "page-service"
+permalink: /leistungen/iso-14001/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion %}
+{% from "partials/icons.njk" import icon %}
+
+{% set faqIso14001 = [
+  { question: "Ist ISO 14001 nur für produzierende Unternehmen relevant?", answer: "Nein. Auch Dienstleistungsunternehmen, Bauunternehmen und der Handel setzen ISO 14001 ein – überall dort, wo Umweltaspekte wie Energie, Abfall oder Transport eine Rolle spielen." },
+  { question: "Wie hängen ISO 14001 und gesetzliche Umweltauflagen zusammen?", answer: "Die Norm verlangt die systematische Erfassung und Einhaltung geltender Umweltvorschriften. Ein Umweltmanagementsystem schafft dafür die strukturelle Grundlage, ersetzt aber keine fachliche Einzelprüfung durch zuständige Behörden oder Fachgutachter." },
+  { question: "Reicht es, ein bestehendes ISO-9001-System zu erweitern?", answer: "In den meisten Fällen ja. Da beide Normen derselben High-Level-Structure folgen, lässt sich ein bestehendes Qualitätsmanagementsystem mit vertretbarem Aufwand um die umweltrelevanten Anforderungen ergänzen." },
+  { question: "Welche Kennzahlen werden für ISO 14001 benötigt?", answer: "Üblich sind Kennzahlen zu Energie- und Ressourcenverbrauch, Abfallaufkommen und Emissionen. Welche Kennzahlen für Ihr Unternehmen sinnvoll sind, legen wir gemeinsam in der Konzeptionsphase fest." }
+] %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Leistungen", url: "/leistungen/" }, { label: "ISO 14001" }]) }}
+    <span class="eyebrow">ISO 14001 – Umweltmanagement</span>
+    <h1>Umweltwirkungen reduzieren und Anforderungen strukturiert erfüllen</h1>
+    <p class="page-hero__lede">ISO 14001 hilft Unternehmen, ihre Umweltauswirkungen systematisch zu erfassen, gesetzliche Vorgaben einzuhalten und Ressourcen bewusster einzusetzen. Wir entwickeln ein Umweltmanagementsystem, das zu Ihren tatsächlichen Prozessen passt.</p>
+    <div class="page-hero__meta">
+      <span class="tag-pill">{{ icon("leaf", 15) }} Ressourcen &amp; Umwelt</span>
+      <span class="tag-pill">{{ icon("check", 15) }} Rechtssicherheit</span>
+      <span class="tag-pill">{{ icon("layers", 15) }} Kombinierbar mit ISO 9001</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Für wen relevant</span>
+      <h2>Typische Ausgangssituationen</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Kunden oder öffentliche Auftraggeber verlangen einen Umweltnachweis.</span></li>
+        <li>{{ icon("check", 18) }}<span>Energie-, Abfall- oder Rohstoffkosten sollen strukturiert reduziert werden.</span></li>
+        <li>{{ icon("check", 18) }}<span>Gesetzliche Umweltauflagen sind bislang nicht systematisch erfasst.</span></li>
+        <li>{{ icon("check", 18) }}<span>Ein bestehendes Qualitätsmanagementsystem soll um Umweltaspekte erweitert werden.</span></li>
+        <li>{{ icon("check", 18) }}<span>Nachhaltigkeit soll glaubwürdig und nachweisbar kommuniziert werden.</span></li>
+      </ul>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Ziele &amp; Nutzen</span>
+      <h2>Was Sie mit ISO 14001 erreichen</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Ein Umweltmanagementsystem schafft Transparenz über Ihre wesentlichen Umweltaspekte, unterstützt bei der Einhaltung rechtlicher Vorgaben und macht Verbesserungen messbar. Viele Unternehmen senken dabei zugleich ihre Energie- und Entsorgungskosten.</p>
+      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;">
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Rechtssicherheit</h3><p>Systematische Erfassung geltender Umweltvorschriften.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Kosteneinsparungen</h3><p>Bewussterer Umgang mit Energie und Ressourcen.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Glaubwürdige Kommunikation</h3><p>Nachweisbare statt behauptete Nachhaltigkeit.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Ausschreibungsvorteile</h3><p>Erfüllung von Umweltkriterien bei Vergaben.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Anforderungen verständlich erklärt</span>
+      <h2>Was ISO 14001 von Ihrem Unternehmen erwartet</h2>
+      <p>Die zentralen Bausteine – nachvollziehbar erklärt.</p>
+    </div>
+    <div class="grid grid-4" data-reveal-group>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Umweltaspekte ermitteln</h3><p>Sie identifizieren, welche Tätigkeiten und Prozesse die Umwelt tatsächlich beeinflussen.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Rechtskataster führen</h3><p>Relevante gesetzliche Anforderungen werden erfasst und regelmäßig aktualisiert.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Ziele &amp; Programme</h3><p>Konkrete, messbare Umweltziele werden geplant und verfolgt.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Notfallvorsorge</h3><p>Für mögliche Umweltnotfälle bestehen vorbereitete Reaktionspläne.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Konkrete Beratungsleistungen für Ihre ISO-14001-Einführung</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Ermittlung und Bewertung Ihrer wesentlichen Umweltaspekte</span></li>
+        <li>{{ icon("check", 18) }}<span>Aufbau eines Rechtskatasters relevanter Umweltvorschriften</span></li>
+        <li>{{ icon("check", 18) }}<span>Entwicklung von Umweltzielen, Kennzahlen und Maßnahmenprogrammen</span></li>
+        <li>{{ icon("check", 18) }}<span>Erstellung der erforderlichen Dokumentation und Verfahrensanweisungen</span></li>
+        <li>{{ icon("check", 18) }}<span>Schulung von Umweltmanagementbeauftragten und Mitarbeitenden</span></li>
+        <li>{{ icon("check", 18) }}<span>Internes Audit und Begleitung des Zertifizierungsaudits</span></li>
+      </ul>
+    </div>
+    <div class="numbered-mini" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Zieldefinition</strong><p>Umweltrelevante Tätigkeiten und Zielsetzung klären.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Umweltaspekte-Analyse</strong><p>Wesentliche Einwirkungen identifizieren und bewerten.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Konzeption &amp; Dokumentation</strong><p>Rechtskataster, Ziele und Verfahren erarbeiten.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung &amp; Schulung</strong><p>System im Betrieb verankern.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit prüfen, Lücken schließen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Zertifizierungsaudit</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Normkombination</span>
+      <h2>ISO 14001 sinnvoll kombinieren</h2>
+      <p>Besonders wirkungsvoll in Verbindung mit Qualitäts- und Arbeitsschutzmanagement.</p>
+    </div>
+    <div class="related-services center" style="justify-content:center;">
+      <a class="related-service-link" href="/leistungen/iso-9001/">{{ icon("target", 16) }} ISO 9001 – Qualitätsmanagement</a>
+      <a class="related-service-link" href="/leistungen/iso-45001/">{{ icon("shield", 16) }} ISO 45001 – Arbeitsschutz</a>
+      <a class="related-service-link" href="/leistungen/integrierte-managementsysteme/">{{ icon("layers", 16) }} Integrierte Managementsysteme</a>
+      <a class="related-service-link" href="/leistungen/auditvorbereitung-interne-audits/">{{ icon("check", 16) }} Auditvorbereitung</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Häufige Fragen zu ISO 14001</span>
+      <h2>Fragen &amp; Antworten</h2>
+    </div>
+    {{ faqAccordion(faqIso14001) }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Bereit, Ihre Umweltverantwortung nachweisbar zu machen?", "Lassen Sie uns besprechen, wie ein Umweltmanagementsystem zu Ihrem Unternehmen passt.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Weitere Leistungen ansehen", "/leistungen/", true) }}
+  </div>
+</section>

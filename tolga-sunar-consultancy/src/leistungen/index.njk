@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+title: "ISO-Beratung & Managementsysteme – Leistungen im Überblick"
+description: "ISO 9001, ISO 14001, ISO 45001, DIN 77200, integrierte Managementsysteme und Auditvorbereitung: Alle Beratungsleistungen von Tolga Sunar Consultancy im Überblick."
+bodyClass: "page-leistungen"
+permalink: /leistungen/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner %}
+{% from "partials/icons.njk" import icon %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Leistungen" }]) }}
+    <span class="eyebrow">Leistungen</span>
+    <h1>Beratung für ISO-Zertifizierungen und integrierte Managementsysteme</h1>
+    <p class="page-hero__lede">Ob einzelne Norm oder kombiniertes System: Wir entwickeln für Ihr Unternehmen eine Lösung, die auditsicher ist und im Alltag tatsächlich funktioniert – ohne unnötige Bürokratie.</p>
+    <div class="page-hero__meta">
+      <span class="tag-pill">{{ icon("check", 15) }} Persönliche Begleitung</span>
+      <span class="tag-pill">{{ icon("check", 15) }} DACH-weit</span>
+      <span class="tag-pill">{{ icon("check", 15) }} Von der Analyse bis zum Audit</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Kernleistungen</span>
+      <h2>Für jede Ausgangslage der passende Weg</h2>
+      <p>Jede Leistung ist eigenständig buchbar – die meisten Unternehmen profitieren jedoch von einer gemeinsamen Betrachtung mehrerer Normen.</p>
+    </div>
+    <div class="grid grid-3" data-reveal-group>
+      {% for s in services %}
+      <a class="service-card" href="{{ s.url }}">
+        <span class="service-card__icon">{{ icon(s.icon, 24) }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.teaser }}</p>
+        <span class="service-card__link">Leistung im Detail {{ icon("arrow") }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Wie wir arbeiten</span>
+      <h2>Ein Ablauf, sechs Schritte, volle Transparenz</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Unabhängig davon, welche Norm oder Kombination für Sie relevant ist: Wir folgen einem strukturierten Ablauf von der ersten Analyse bis zur Zertifizierungsbegleitung. Sie wissen jederzeit, in welcher Phase sich Ihr Projekt befindet.</p>
+      <a class="btn btn-secondary" href="/#vorgehensweise" style="margin-top:1.75rem;">Vorgehensweise im Detail {{ icon("arrow") }}</a>
+    </div>
+    <div class="numbered-mini" data-reveal>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch</strong><p>Ziele, Normen und Zeitrahmen klären.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Gap-Analyse</strong><p>Handlungsfelder konkret benennen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Konzeption</strong><p>Individuelles System entwickeln.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung</strong><p>Prozesse verankern, Team schulen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit prüfen und nachschärfen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Zertifizierung</strong><p>Sicher durch das externe Audit begleitet.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Normkombinationen</span>
+      <h2>Häufig gewählte Kombinationen</h2>
+    </div>
+    <div class="grid grid-3" data-reveal-group>
+      <div class="benefit-card">
+        <h3>ISO 9001 + ISO 14001</h3>
+        <p>Qualitäts- und Umweltmanagement mit gemeinsamer Prozess- und Dokumentationsbasis – häufig der Einstieg in ein integriertes System.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>ISO 9001 + ISO 45001</h3>
+        <p>Qualität und Arbeitssicherheit verzahnt – besonders relevant für produzierende und personalintensive Unternehmen.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>ISO 9001 + ISO 14001 + ISO 45001</h3>
+        <p>Das vollständige integrierte Managementsystem nach High-Level-Structure – ein Handbuch, ein Auditzyklus, klare Verantwortlichkeiten.</p>
+      </div>
+    </div>
+    <div class="center" style="margin-top:2.5rem;">
+      <a class="btn btn-secondary" href="/leistungen/integrierte-managementsysteme/">Mehr zu integrierten Managementsystemen {{ icon("arrow") }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Unsicher, welche Leistung zu Ihnen passt?", "In einem kostenlosen Erstgespräch ordnen wir Ihre Ausgangslage ein und empfehlen den sinnvollsten nächsten Schritt.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Alle Fragen ansehen", "/faq/", true) }}
+  </div>
+</section>

@@ -1,0 +1,78 @@
+{% macro breadcrumbs(items) %}
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumbs">
+    {% for item in items %}
+    <li>
+      {% if item.url %}<a href="{{ item.url }}">{{ item.label }}</a>{% else %}<span aria-current="page">{{ item.label }}</span>{% endif %}
+      {% if not loop.last %}<span aria-hidden="true">/</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for item in items %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": "{{ item.label }}"{% if item.url %},"item": "{{ site.url }}{{ item.url }}"{% endif %}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endmacro %}
+
+{% macro ctaBanner(eyebrow, heading, text, primaryLabel, primaryUrl, secondaryLabel, secondaryUrl, showContact) %}
+<div class="cta-banner" data-reveal>
+  <div class="cta-banner__inner">
+    <div>
+      {% if eyebrow %}<span class="eyebrow" style="color: var(--c-bronze-300);">{{ eyebrow }}</span>{% endif %}
+      <h2>{{ heading }}</h2>
+      <p>{{ text }}</p>
+    </div>
+    <div class="cta-banner__actions">
+      <a class="btn btn-on-dark" href="{{ primaryUrl }}">{{ primaryLabel }}</a>
+      {% if secondaryLabel %}<a class="btn btn-ghost-on-dark" href="{{ secondaryUrl }}">{{ secondaryLabel }}</a>{% endif %}
+      {% if showContact %}
+      <div class="cta-banner__contact">
+        <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro faqAccordion(items, idPrefix) %}
+<div class="faq-list">
+  {% for item in items %}
+  <details class="faq-item" {% if loop.first %}open{% endif %}>
+    <summary>
+      <span>{{ item.question }}</span>
+      <span class="faq-item__icon" aria-hidden="true"></span>
+    </summary>
+    <div class="faq-item__answer"><p>{{ item.answer }}</p></div>
+  </details>
+  {% endfor %}
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in items %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | dump | safe }} }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endmacro %}

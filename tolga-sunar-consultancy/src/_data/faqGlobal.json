@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Welche ISO-Norm ist für unser Unternehmen relevant?",
+    "answer": "Das hängt von Ihrer Branche, Ihren Kundenanforderungen und Ihren Zielen ab. ISO 9001 ist branchenübergreifend als Qualitätsnachweis gefragt, ISO 14001 wird zunehmend bei Umweltauflagen und Ausschreibungen verlangt, ISO 45001 betrifft Unternehmen mit besonderer Verantwortung für Arbeitssicherheit, und DIN 77200 ist für Sicherheitsdienstleister oft Voraussetzung für Bewachungsaufträge. Im kostenlosen Erstgespräch ordnen wir Ihre Ausgangslage ein und empfehlen die passende Norm oder Kombination."
+  },
+  {
+    "question": "Wie lange dauert die Vorbereitung auf eine Zertifizierung?",
+    "answer": "Je nach Unternehmensgröße, Ausgangslage und Anzahl der Normen dauert eine Erstzertifizierung in der Regel drei bis neun Monate. Liegen bereits Prozesse und Dokumentation vor, kann es schneller gehen. Im Erstgespräch erhalten Sie eine realistische Zeiteinschätzung für Ihr Vorhaben."
+  },
+  {
+    "question": "Welche Unterlagen werden benötigt?",
+    "answer": "Zu Beginn genügen ein Überblick über Ihre Organisation, bestehende Prozessbeschreibungen (sofern vorhanden) und Ansprechpartner aus den relevanten Bereichen. Welche weiteren Dokumente im Projektverlauf sinnvoll sind, klären wir gemeinsam in der IST-Analyse – Sie müssen zu Beginn nichts vorbereiten."
+  },
+  {
+    "question": "Können mehrere Normen miteinander kombiniert werden?",
+    "answer": "Ja. ISO 9001, ISO 14001, ISO 45001 und weitere Regelwerke teilen sich eine gemeinsame High-Level-Structure und lassen sich in einem integrierten Managementsystem zusammenführen. Das reduziert doppelte Dokumentation und Pflegeaufwand. Mehr dazu finden Sie auf der Seite zu integrierten Managementsystemen."
+  },
+  {
+    "question": "Unterstützen Sie uns auch bei einem kurzfristig bevorstehenden Audit?",
+    "answer": "Ja, das ist eine häufige Ausgangslage. In einem ersten Gespräch prüfen wir den Status Ihrer Dokumentation und Prozesse und legen fest, welche Schritte bis zum Audittermin realistisch und sinnvoll sind – priorisiert nach Risiko und Aufwand."
+  },
+  {
+    "question": "Begleiten Sie den Zertifizierungsprozess vollständig?",
+    "answer": "Wir begleiten Sie von der ersten Analyse über Konzeption, Dokumentation, Implementierung und internes Audit bis zur Vorbereitung auf das externe Zertifizierungsaudit. Die Zertifizierung selbst wird von einer unabhängigen, akkreditierten Zertifizierungsstelle durchgeführt – diese Unabhängigkeit ist Teil des Verfahrens und wird von uns eingehalten."
+  },
+  {
+    "question": "Können wir das Managementsystem nach dem Projekt selbst weiterführen?",
+    "answer": "Das ist ausdrücklich unser Ziel. Wir bauen Systeme so auf, dass Ihre Mitarbeitenden sie verstehen, pflegen und weiterentwickeln können, und schulen die intern Verantwortlichen entsprechend. Auf Wunsch begleiten wir Sie auch über die Erstzertifizierung hinaus, etwa bei Überwachungsaudits."
+  },
+  {
+    "question": "Ist eine Beratung vor Ort und digital möglich?",
+    "answer": "Beides ist möglich. Viele Termine, etwa Workshops zur Prozessaufnahme oder interne Audits, finden wir sinnvollerweise vor Ort statt. Abstimmungen, Dokumentenarbeit und Zwischenbesprechungen lassen sich effizient digital durchführen. Die Aufteilung stimmen wir auf Ihr Vorhaben ab."
+  },
+  {
+    "question": "Welche Kosten entstehen?",
+    "answer": "Die Kosten hängen von Umfang, Anzahl der Normen und Ausgangslage Ihres Unternehmens ab. Nach dem kostenlosen Erstgespräch erhalten Sie ein transparentes, auf Ihr Vorhaben zugeschnittenes Angebot ohne versteckte Positionen."
+  },
+  {
+    "question": "Kann die Beratung gefördert werden?",
+    "answer": "Je nach Unternehmen und Vorhaben kann eine Förderung der Beratungskosten, etwa über das BAFA-Programm, grundsätzlich infrage kommen. Wir prüfen gemeinsam mit Ihnen die grundsätzlichen Voraussetzungen und verweisen bei Bedarf an die zuständigen Stellen."
+  }
+]

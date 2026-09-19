@@ -1,0 +1,76 @@
+---
+layout: layouts/base.njk
+title: "Über Tolga Sunar – ISO-Berater für KMU"
+description: "Tolga Sunar begleitet kleine und mittelständische Unternehmen persönlich durch ISO-Zertifizierungen – pragmatisch, strukturiert und mit Fokus auf den Arbeitsalltag statt nur auf das Zertifikat."
+bodyClass: "page-about"
+permalink: /ueber-uns/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner %}
+{% from "partials/icons.njk" import icon %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Über uns" }]) }}
+    <span class="eyebrow">Über Tolga Sunar</span>
+    <h1>Ein Ansprechpartner. Volle Verantwortung. Von Anfang bis Zertifikat.</h1>
+    <p class="page-hero__lede">Tolga Sunar Consultancy steht für persönliche, pragmatische ISO-Beratung ohne wechselnde Ansprechpartner und ohne unnötige Bürokratie.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container about-grid">
+    <div class="about-portrait" data-reveal>
+      <span class="about-portrait__initials" aria-hidden="true">TS</span>
+      <span class="about-portrait__caption">Bildplatzhalter: professionelles Portrait von Tolga Sunar im Beratungs- oder Auditkontext</span>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Beratungsphilosophie</span>
+      <h2>Managementsysteme, die im Alltag tragen – nicht nur im Audit bestehen</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Viele Unternehmen haben bereits Erfahrung mit Beratungen gemacht, die umfangreiche Dokumente liefern, aber kein System hinterlassen, das im Tagesgeschäft tatsächlich genutzt wird. Der Anspruch von Tolga Sunar Consultancy ist ein anderer: Managementsysteme sollen verständlich, praxistauglich und auditsicher sein – und von den Menschen getragen werden, die täglich damit arbeiten.</p>
+      <blockquote class="about-quote">
+        „Ein Managementsystem ist nur dann erfolgreich, wenn es nicht ausschließlich für das Audit erstellt wird, sondern den Arbeitsalltag tatsächlich verbessert.“
+        <cite>Tolga Sunar, Inhaber &amp; Berater</cite>
+      </blockquote>
+      <dl class="about-facts">
+        <div><dt>Schwerpunkte</dt><dd>ISO 9001, ISO 14001, ISO 45001, DIN 77200, integrierte Managementsysteme</dd></div>
+        <div><dt>Arbeitsweise</dt><dd>Persönlich, direkt, ein Ansprechpartner über das gesamte Projekt</dd></div>
+        <div><dt>Einsatzgebiet</dt><dd>{{ site.serviceArea }}</dd></div>
+        <div><dt>Qualifikationen</dt><dd><span class="placeholder-flag">Platzhalter</span> vor Veröffentlichung um konkrete, belegbare Qualifikationen ergänzen</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Arbeitsweise</span>
+      <h2>Was die Zusammenarbeit auszeichnet</h2>
+    </div>
+    <div class="grid grid-4" data-reveal-group>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("users", 20) }}</span><h3>Persönliche Betreuung</h3><p>Ein fester Ansprechpartner von der ersten Anfrage bis zur Zertifizierung.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("target", 20) }}</span><h3>Praxisorientiert</h3><p>Lösungen, die zu Ihren tatsächlichen Prozessen passen – nicht zu Musterordnern.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("compass", 20) }}</span><h3>Strukturiert &amp; auditsicher</h3><p>Ein nachvollziehbarer Ablauf mit klaren Meilensteinen bis zum Audit.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("check", 20) }}</span><h3>Verständlich statt kompliziert</h3><p>Normanforderungen werden erklärt, nicht nur zitiert.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow center">
+    <span class="eyebrow">Nachweise</span>
+    <h2 style="margin-top:0.6rem;">Qualifikationen &amp; Mitgliedschaften</h2>
+    <p class="text-muted" style="margin-top:0.8rem;">Konkrete Qualifikationen, Zertifikate und Mitgliedschaften werden an dieser Stelle nach Prüfung und Freigabe ergänzt, um ausschließlich belegbare Angaben zu veröffentlichen.</p>
+    <div class="badge-row center" style="justify-content:center; margin-top:1.75rem;">
+      <span class="badge">{{ icon("award", 16) }} [Platzhalter: Qualifikation / Zertifikat]</span>
+      <span class="badge">{{ icon("building", 16) }} [Platzhalter: Berufserfahrung / Branche]</span>
+      <span class="badge">{{ icon("users", 16) }} [Platzhalter: Verbands- / Kammermitgliedschaft]</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Lernen wir uns im Erstgespräch kennen", "Schildern Sie Ihre Ausgangslage – Sie erhalten eine ehrliche Einschätzung, kein Verkaufsgespräch.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Referenzen ansehen", "/referenzen/", true) }}
+  </div>
+</section>

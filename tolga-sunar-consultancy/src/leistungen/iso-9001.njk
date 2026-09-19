@@ -1,0 +1,131 @@
+---
+layout: layouts/base.njk
+title: "ISO 9001 Beratung – Qualitätsmanagement für KMU"
+description: "ISO 9001 Beratung für kleine und mittelständische Unternehmen: Gap-Analyse, Dokumentation, Implementierung und Auditvorbereitung – persönlich begleitet von Tolga Sunar Consultancy."
+bodyClass: "page-service"
+permalink: /leistungen/iso-9001/
+---
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion %}
+{% from "partials/icons.njk" import icon %}
+
+{% set faqIso9001 = [
+  { question: "Für welche Unternehmen lohnt sich ISO 9001?", answer: "ISO 9001 ist branchenunabhängig einsetzbar und besonders dann sinnvoll, wenn Kunden einen Qualitätsnachweis fordern, Prozesse über die Zeit unübersichtlich geworden sind oder ein Wachstum ohne klare Strukturen an Grenzen stößt." },
+  { question: "Ersetzt ISO 9001 ein eigenes Qualitätsverständnis?", answer: "Nein. Die Norm gibt einen Rahmen vor, den wir mit den tatsächlichen Abläufen Ihres Unternehmens füllen. Ziel ist ein System, das zu Ihrer Organisation passt – nicht ein generisches Handbuch von der Stange." },
+  { question: "Wie viel Dokumentation verlangt ISO 9001 wirklich?", answer: "Deutlich weniger, als viele erwarten. Die Norm verlangt dokumentierte Informationen dort, wo sie einen echten Steuerungsnutzen haben – wir vermeiden bewusst Dokumentation um der Dokumentation willen." },
+  { question: "Können wir ISO 9001 mit anderen Normen kombinieren?", answer: "Ja, ISO 9001 bildet häufig die Basis für ein integriertes Managementsystem gemeinsam mit ISO 14001 und/oder ISO 45001." }
+] %}
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    {{ breadcrumbs([{ label: "Start", url: "/" }, { label: "Leistungen", url: "/leistungen/" }, { label: "ISO 9001" }]) }}
+    <span class="eyebrow">ISO 9001 – Qualitätsmanagement</span>
+    <h1>Qualität systematisch sichern und Prozesse spürbar verbessern</h1>
+    <p class="page-hero__lede">ISO 9001 ist der international anerkannte Standard für Qualitätsmanagementsysteme. Wir begleiten Sie von der ersten Analyse bis zur Zertifizierung – mit einem System, das zu Ihrem Unternehmen passt statt umgekehrt.</p>
+    <div class="page-hero__meta">
+      <span class="tag-pill">{{ icon("target", 15) }} Weltweit anerkannte Norm</span>
+      <span class="tag-pill">{{ icon("check", 15) }} Branchenunabhängig</span>
+      <span class="tag-pill">{{ icon("layers", 15) }} Basis für integrierte Systeme</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Für wen relevant</span>
+      <h2>Typische Ausgangssituationen</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>Kunden oder Ausschreibungen fordern einen anerkannten Qualitätsnachweis.</span></li>
+        <li>{{ icon("check", 18) }}<span>Prozesse sind gewachsen, aber nirgendwo einheitlich beschrieben.</span></li>
+        <li>{{ icon("check", 18) }}<span>Reklamationen und Nacharbeit verursachen wiederkehrende Kosten.</span></li>
+        <li>{{ icon("check", 18) }}<span>Das Unternehmen wächst und bisherige Abstimmungswege tragen nicht mehr.</span></li>
+        <li>{{ icon("check", 18) }}<span>Eine Erstzertifizierung oder ein Wechsel der Zertifizierungsstelle steht an.</span></li>
+      </ul>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">Ziele &amp; Nutzen</span>
+      <h2>Was Sie mit ISO 9001 erreichen</h2>
+      <p style="margin-top:1rem; color: var(--c-ink-500);">Ein wirksames Qualitätsmanagementsystem reduziert Fehlerkosten, schafft Nachvollziehbarkeit in der Kundenkommunikation und stärkt Ihre Position bei Ausschreibungen. Entscheidend ist dabei nicht das Zertifikat allein, sondern ein System, das im Tagesgeschäft tatsächlich genutzt wird.</p>
+      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;">
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Weniger Reklamationen</h3><p>Standardisierte Prüf- und Freigabeprozesse.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Bessere Kundenzufriedenheit</h3><p>Nachvollziehbare Reaktion auf Rückmeldungen.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Klare Verantwortlichkeiten</h3><p>Rollen und Zuständigkeiten eindeutig geregelt.</p></div>
+        <div class="benefit-card"><h3 style="font-size:0.95rem;">Ausschreibungsfähigkeit</h3><p>Erfüllung häufiger Vergabekriterien.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Anforderungen verständlich erklärt</span>
+      <h2>Was ISO 9001 von Ihrem Unternehmen erwartet</h2>
+      <p>Ohne Normjargon – in der Sprache Ihres Arbeitsalltags.</p>
+    </div>
+    <div class="grid grid-4" data-reveal-group>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Kontext der Organisation</h3><p>Sie verstehen und dokumentieren, welche internen und externen Faktoren Ihr Geschäft beeinflussen.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Führung &amp; Verantwortung</h3><p>Die Geschäftsführung trägt sichtbar Verantwortung für Qualitätsziele – nicht nur auf dem Papier.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Prozessorientierte Planung</h3><p>Risiken und Chancen werden systematisch erfasst und in der Planung berücksichtigt.</p></div>
+      <div class="benefit-card"><h3 style="font-size:1rem;">Bewertung &amp; Verbesserung</h3><p>Kennzahlen, interne Audits und Managementbewertungen sichern die kontinuierliche Weiterentwicklung.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container two-col">
+    <div data-reveal>
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Konkrete Beratungsleistungen für Ihre ISO-9001-Einführung</h2>
+      <ul class="icon-list" style="margin-top:1.5rem;">
+        <li>{{ icon("check", 18) }}<span>IST- und Gap-Analyse Ihrer bestehenden Prozesse</span></li>
+        <li>{{ icon("check", 18) }}<span>Entwicklung eines praxistauglichen QM-Handbuchs und Prozesslandkarte</span></li>
+        <li>{{ icon("check", 18) }}<span>Erarbeitung von Qualitätszielen und Kennzahlen</span></li>
+        <li>{{ icon("check", 18) }}<span>Schulung von Qualitätsmanagementbeauftragten und Prozessverantwortlichen</span></li>
+        <li>{{ icon("check", 18) }}<span>Durchführung interner Audits vor dem Zertifizierungsaudit</span></li>
+        <li>{{ icon("check", 18) }}<span>Begleitung am Audittag durch die Zertifizierungsstelle</span></li>
+      </ul>
+    </div>
+    <div class="numbered-mini" data-reveal>
+      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Zieldefinition</strong><p>Umfang, Zeitrahmen und Normanforderungen klären.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Gap-Analyse</strong><p>Abgleich Ist-Zustand mit ISO-9001-Anforderungen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Dokumentation &amp; Prozessdesign</strong><p>QM-Handbuch, Prozesse, Vorlagen erarbeiten.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Schulung &amp; Einführung</strong><p>Team befähigen, System im Alltag verankern.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit prüfen, Feinschliff vornehmen.</p></div></div>
+      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Zertifizierungsaudit</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Normkombination</span>
+      <h2>ISO 9001 als Grundlage für weitere Managementsysteme</h2>
+      <p>ISO 9001 lässt sich effizient mit weiteren Normen zu einem integrierten System verbinden.</p>
+    </div>
+    <div class="related-services center" style="justify-content:center;">
+      <a class="related-service-link" href="/leistungen/iso-14001/">{{ icon("leaf", 16) }} ISO 14001 – Umweltmanagement</a>
+      <a class="related-service-link" href="/leistungen/iso-45001/">{{ icon("shield", 16) }} ISO 45001 – Arbeitsschutz</a>
+      <a class="related-service-link" href="/leistungen/integrierte-managementsysteme/">{{ icon("layers", 16) }} Integrierte Managementsysteme</a>
+      <a class="related-service-link" href="/leistungen/auditvorbereitung-interne-audits/">{{ icon("check", 16) }} Auditvorbereitung</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Häufige Fragen zu ISO 9001</span>
+      <h2>Fragen &amp; Antworten</h2>
+    </div>
+    {{ faqAccordion(faqIso9001) }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ctaBanner("Erstgespräch", "Startklar für Ihre ISO-9001-Zertifizierung?", "Lassen Sie uns Ihre Ausgangslage besprechen und einen realistischen Fahrplan zur Zertifizierung entwickeln.", "Kostenloses Erstgespräch vereinbaren", "/kontakt/", "Weitere Leistungen ansehen", "/leistungen/", true) }}
+  </div>
+</section>
