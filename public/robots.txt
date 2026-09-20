@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /kontakt/danke/
+
+Sitemap: https://www.onset.digital/sitemap.xml
