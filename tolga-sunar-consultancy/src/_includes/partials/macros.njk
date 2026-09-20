@@ -56,7 +56,9 @@
       <span>{{ item.question }}</span>
       <span class="faq-item__icon" aria-hidden="true"></span>
     </summary>
-    <div class="faq-item__answer"><p>{{ item.answer }}</p></div>
+    <div class="faq-item__panel">
+      <div class="faq-item__answer"><p>{{ item.answer }}</p></div>
+    </div>
   </details>
   {% endfor %}
 </div>
