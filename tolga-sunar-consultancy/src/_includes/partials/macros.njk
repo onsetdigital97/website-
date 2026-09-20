@@ -48,6 +48,22 @@
 </div>
 {% endmacro %}
 
+{% macro normIndex(items) %}
+{% from "partials/icons.njk" import icon %}
+<div class="norm-index" data-reveal-group>
+  {% for s in items %}
+  <a class="norm-index__row" href="{{ s.url }}">
+    <span class="norm-index__code">{{ s.shortTitle }}</span>
+    <span class="norm-index__body">
+      <strong>{{ s.title }}</strong>
+      <span>{{ s.teaser }}</span>
+    </span>
+    <span class="norm-index__arrow">{{ icon("arrow") }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endmacro %}
+
 {% macro faqAccordion(items, idPrefix) %}
 <div class="faq-list">
   {% for item in items %}

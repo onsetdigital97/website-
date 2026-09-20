@@ -53,6 +53,44 @@
     });
   }
 
+  /* Process rail: scroll-linked progress line through the Vorgehensweise steps */
+  var railList = document.querySelector("[data-process-rail]");
+  if (railList) {
+    var railTrack = railList.querySelector(".process-rail");
+    var railFill = railList.querySelector("[data-rail-fill]");
+    var railSteps = railList.querySelectorAll("[data-process-step]");
+
+    var updateRail = function () {
+      var vh = window.innerHeight;
+      var activationLine = vh * 0.62;
+      var trackRect = railTrack.getBoundingClientRect();
+      var filledPx = Math.min(Math.max(activationLine - trackRect.top, 0), trackRect.height);
+      var pct = trackRect.height > 0 ? (filledPx / trackRect.height) * 100 : 0;
+      railFill.style.height = pct + "%";
+
+      railSteps.forEach(function (step) {
+        var numEl = step.querySelector(".process-step__num");
+        var r = numEl.getBoundingClientRect();
+        var center = r.top + r.height / 2;
+        step.classList.toggle("is-active", center <= activationLine);
+      });
+    };
+
+    var railTicking = false;
+    var onRailScroll = function () {
+      if (railTicking) return;
+      railTicking = true;
+      window.requestAnimationFrame(function () {
+        updateRail();
+        railTicking = false;
+      });
+    };
+
+    updateRail();
+    window.addEventListener("scroll", onRailScroll, { passive: true });
+    window.addEventListener("resize", onRailScroll);
+  }
+
   /* Animated counters */
   var counters = document.querySelectorAll("[data-count-to]");
   if ("IntersectionObserver" in window && counters.length) {

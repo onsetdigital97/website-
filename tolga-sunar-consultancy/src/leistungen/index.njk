@@ -5,7 +5,7 @@ description: "ISO 9001, ISO 14001, ISO 45001, DIN 77200, integrierte Managements
 bodyClass: "page-leistungen"
 permalink: /leistungen/
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, normIndex with context %}
 {% from "partials/icons.njk" import icon %}
 
 <section class="page-hero">
@@ -29,16 +29,7 @@ permalink: /leistungen/
       <h2>Für jede Ausgangslage der passende Weg</h2>
       <p>Jede Leistung ist eigenständig buchbar – die meisten Unternehmen profitieren jedoch von einer gemeinsamen Betrachtung mehrerer Normen.</p>
     </div>
-    <div class="grid grid-3" data-reveal-group>
-      {% for s in services %}
-      <a class="service-card" href="{{ s.url }}">
-        <span class="service-card__icon">{{ icon(s.icon, 24) }}</span>
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.teaser }}</p>
-        <span class="service-card__link">Leistung im Detail {{ icon("arrow") }}</span>
-      </a>
-      {% endfor %}
-    </div>
+    {{ normIndex(services) }}
   </div>
 </section>
 

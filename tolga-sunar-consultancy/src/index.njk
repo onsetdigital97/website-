@@ -4,7 +4,7 @@ title: "ISO-Beratung für KMU – Zertifizierung, Auditvorbereitung & Management
 description: "Tolga Sunar Consultancy begleitet kleine und mittelständische Unternehmen zu ISO 9001, ISO 14001, ISO 45001 und DIN 77200 – persönlich, strukturiert und auditsicher. Jetzt kostenloses Erstgespräch vereinbaren."
 bodyClass: "page-home"
 ---
-{% from "partials/macros.njk" import ctaBanner, faqAccordion with context %}
+{% from "partials/macros.njk" import ctaBanner, faqAccordion, normIndex with context %}
 {% from "partials/icons.njk" import icon %}
 
 <section class="hero">
@@ -95,16 +95,7 @@ bodyClass: "page-home"
       <h2 id="services-heading">Die passende Grundlage für Ihre Zertifizierung</h2>
       <p>Vier zentrale Normen, individuell oder kombiniert – jeweils mit einem klaren Weg von der Analyse bis zum Zertifikat.</p>
     </div>
-    <div class="grid grid-3" data-reveal-group>
-      {% for s in services %}
-      <a class="service-card" href="{{ s.url }}">
-        <span class="service-card__icon">{{ icon(s.icon, 24) }}</span>
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.teaser }}</p>
-        <span class="service-card__link">Mehr erfahren {{ icon("arrow") }}</span>
-      </a>
-      {% endfor %}
-    </div>
+    {{ normIndex(services) }}
     <div class="center" style="margin-top:2.5rem;">
       <a class="btn btn-secondary" href="/leistungen/">Alle Leistungen im Überblick {{ icon("arrow") }}</a>
     </div>
@@ -118,15 +109,19 @@ bodyClass: "page-home"
       <h2 id="benefits-heading">Was ein durchdachtes Managementsystem konkret verändert</h2>
       <p>Ein Zertifikat ist das Ergebnis – der eigentliche Nutzen zeigt sich im Arbeitsalltag Ihres Unternehmens.</p>
     </div>
-    <div class="grid grid-4" data-reveal-group>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("compass", 20) }}</span><h3>Klare, nachvollziehbare Prozesse</h3><p>Zuständigkeiten und Abläufe sind für alle Beteiligten eindeutig geregelt.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("users", 20) }}</span><h3>Geringerer Abstimmungsaufwand</h3><p>Weniger Rückfragen, weniger Reibung zwischen Abteilungen und Standorten.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("shield", 20) }}</span><h3>Bessere Audit-Vorbereitung</h3><p>Sie gehen strukturiert und mit Nachweisen in jedes interne und externe Audit.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("check", 20) }}</span><h3>Höhere Rechtssicherheit</h3><p>Relevante gesetzliche und normative Anforderungen sind systematisch erfasst.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("target", 20) }}</span><h3>Weniger Fehler und Reibungsverluste</h3><p>Standardisierte Abläufe reduzieren Doppelarbeit und Qualitätsschwankungen.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("award", 20) }}</span><h3>Bessere Chancen bei Ausschreibungen</h3><p>Ein anerkanntes Zertifikat ist bei vielen Vergaben eine harte Voraussetzung.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("building", 20) }}</span><h3>Gestärktes Vertrauen bei Kunden</h3><p>Geschäftspartner erkennen belastbare Strukturen statt bloßer Absichtserklärungen.</p></div>
-      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("refresh", 20) }}</span><h3>Systeme, die über das Audit hinaus wirken</h3><p>Ein Managementsystem, das im Alltag genutzt wird – nicht nur im Ordner liegt.</p></div>
+    <div class="benefit-ledger" data-reveal-group>
+      <div class="benefit-ledger__col">
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Klare, nachvollziehbare Prozesse</strong><span>Zuständigkeiten und Abläufe sind für alle Beteiligten eindeutig geregelt.</span></div></div>
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Geringerer Abstimmungsaufwand</strong><span>Weniger Rückfragen, weniger Reibung zwischen Abteilungen und Standorten.</span></div></div>
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Bessere Audit-Vorbereitung</strong><span>Sie gehen strukturiert und mit Nachweisen in jedes interne und externe Audit.</span></div></div>
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Höhere Rechtssicherheit</strong><span>Relevante gesetzliche und normative Anforderungen sind systematisch erfasst.</span></div></div>
+      </div>
+      <div class="benefit-ledger__col">
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Weniger Fehler und Reibungsverluste</strong><span>Standardisierte Abläufe reduzieren Doppelarbeit und Qualitätsschwankungen.</span></div></div>
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Bessere Chancen bei Ausschreibungen</strong><span>Ein anerkanntes Zertifikat ist bei vielen Vergaben eine harte Voraussetzung.</span></div></div>
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Gestärktes Vertrauen bei Kunden</strong><span>Geschäftspartner erkennen belastbare Strukturen statt bloßer Absichtserklärungen.</span></div></div>
+        <div class="benefit-item"><span class="benefit-item__mark">{{ icon("check", 16) }}</span><div><strong>Systeme, die über das Audit hinaus wirken</strong><span>Ein Managementsystem, das im Alltag genutzt wird – nicht nur im Ordner liegt.</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -138,28 +133,29 @@ bodyClass: "page-home"
       <h2 id="process-heading">Ein strukturierter Weg zum Zertifikat – in sechs Schritten</h2>
       <p>Jedes Projekt ist individuell. Der grundsätzliche Ablauf bleibt dabei nachvollziehbar und verlässlich.</p>
     </div>
-    <div class="process-list">
-      <div class="process-step" data-reveal>
+    <div class="process-list" data-process-rail>
+      <div class="process-rail" aria-hidden="true"><div class="process-rail__fill" data-rail-fill></div></div>
+      <div class="process-step" data-reveal data-process-step>
         <span class="process-step__num">01</span>
         <div class="process-step__body"><h3>Kostenloses Erstgespräch</h3><p>Wir klären Ihre Ziele, die Ausgangslage, relevante Normen und den gewünschten Zeitrahmen – unverbindlich und ohne Vorbereitung Ihrerseits.</p></div>
       </div>
-      <div class="process-step" data-reveal>
+      <div class="process-step" data-reveal data-process-step>
         <span class="process-step__num">02</span>
         <div class="process-step__body"><h3>IST-Analyse und Gap-Analyse</h3><p>Wir prüfen bestehende Prozesse und Dokumente und identifizieren konkret, welche Anforderungen bereits erfüllt sind und wo Handlungsbedarf besteht.</p></div>
       </div>
-      <div class="process-step" data-reveal>
+      <div class="process-step" data-reveal data-process-step>
         <span class="process-step__num">03</span>
         <div class="process-step__body"><h3>Konzeption und Dokumentation</h3><p>Wir entwickeln ein individuelles, verständliches Managementsystem – zugeschnitten auf Ihre Organisation statt auf Musterordner.</p></div>
       </div>
-      <div class="process-step" data-reveal>
+      <div class="process-step" data-reveal data-process-step>
         <span class="process-step__num">04</span>
         <div class="process-step__body"><h3>Implementierung und Schulung</h3><p>Wir verankern die neuen Prozesse im Unternehmen und befähigen Ihre Mitarbeitenden, sie eigenständig zu leben und zu pflegen.</p></div>
       </div>
-      <div class="process-step" data-reveal>
+      <div class="process-step" data-reveal data-process-step>
         <span class="process-step__num">05</span>
         <div class="process-step__body"><h3>Internes Audit</h3><p>Wir prüfen die Wirksamkeit des Systems, erkennen Abweichungen frühzeitig und korrigieren gezielt vor dem externen Audit.</p></div>
       </div>
-      <div class="process-step" data-reveal>
+      <div class="process-step" data-reveal data-process-step>
         <span class="process-step__num">06</span>
         <div class="process-step__body"><h3>Zertifizierungsvorbereitung und Begleitung</h3><p>Wir bereiten Ihr Unternehmen gezielt auf das externe Audit vor und begleiten Sie durch den gesamten Zertifizierungsprozess.</p></div>
       </div>
