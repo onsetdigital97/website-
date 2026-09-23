@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.onset.digital/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <url><loc>https://www.onset.digital/leistungen/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/digitalstrategie/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/e-commerce-shopify/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/webdesign-webentwicklung/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/ki-automatisierung/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/crm-prozesse/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/seo-ki-sichtbarkeit/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/google-ads-performance/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.onset.digital/leistungen/branding-content/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://www.onset.digital/loesungen/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.onset.digital/loesungen/e-commerce-unternehmen/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onset.digital/loesungen/mittelstand/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onset.digital/loesungen/shopify-unternehmen/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onset.digital/loesungen/website-relaunch/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onset.digital/loesungen/ki-im-unternehmen/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://www.onset.digital/referenzen/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onset.digital/referenzen/beispielprojekt-platzhalter/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <url><loc>https://www.onset.digital/insights/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.onset.digital/insights/shopify-relaunch-ablauf-kosten/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.onset.digital/insights/ki-automatisierung-im-mittelstand/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://www.onset.digital/ueber-onset/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.onset.digital/kontakt/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
