@@ -1,0 +1,29 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---# {{ site.name }}
+
+> {{ site.name }} begleitet kleine und mittelständische Unternehmen im {{ site.serviceArea }} bei ISO-Zertifizierungen und integrierten Managementsystemen – persönlich, strukturiert und auditsicher, von der ersten Analyse bis zum Zertifizierungsaudit.
+
+Ansprechpartner: {{ site.consultantName }}. Kernthemen: ISO 9001 (Qualitätsmanagement), ISO 14001 (Umweltmanagement), ISO 45001 (Arbeits- und Gesundheitsschutz), DIN 77200 (Sicherheitsdienstleistungen), integrierte Managementsysteme, Auditvorbereitung und interne Audits. Zielgruppe: Geschäftsführung und Qualitätsmanagementbeauftragte kleiner und mittelständischer Unternehmen.
+
+## Leistungen
+{% for s in services %}- [{{ s.title | safe }}]({{ site.url }}{{ s.url }}): {{ s.teaser | safe }}
+{% endfor %}
+## Unternehmen
+- [Über {{ site.consultantName }}]({{ site.url }}/ueber-uns/): Persönlicher Ansprechpartner, Beratungsphilosophie und Arbeitsweise.
+- [Referenzen]({{ site.url }}/referenzen/): Projektbeispiele und Kundenstimmen.
+- [FAQ]({{ site.url }}/faq/): Antworten zu Ablauf, Kosten, Dauer und Förderung.
+- [Kontakt]({{ site.url }}/kontakt/): Kostenloses Erstgespräch anfragen.
+
+## Ratgeber
+{% for post in collections.ratgeber %}- [{{ post.data.title | safe }}]({{ site.url }}{{ post.url }}): {{ post.data.excerpt | safe }}
+{% endfor %}
+## Rechtliches
+- [Impressum]({{ site.url }}/impressum/)
+- [Datenschutz]({{ site.url }}/datenschutz/)
+
+## Hinweise für automatisierte Auswertung
+- Alle Inhalte sind serverseitig als statisches HTML ausgeliefert (kein Client-Side-Rendering erforderlich).
+- Strukturierte Daten (schema.org JSON-LD: ProfessionalService, FAQPage, BreadcrumbList) sind auf den jeweiligen Seiten eingebettet.
+- Aussagen zu Erfolgsquoten, Kundenzahlen oder Förderhöhen sind bewusst zurückhaltend formuliert und sollten nicht als garantierte Zusagen zitiert werden.

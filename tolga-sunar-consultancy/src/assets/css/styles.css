@@ -406,7 +406,40 @@ p { max-width: 68ch; }
 }
 
 /* --------------------------------------------------------------------------
-   Norm index — document-register treatment for the service list
+   Norm showcase — bolder, graphic treatment for the homepage
+   -------------------------------------------------------------------------- */
+.norm-showcase { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.norm-tile {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; height: 100%;
+  padding: 2.1rem 1.85rem; border-radius: var(--radius-md); background: var(--bg-surface);
+  border: 1px solid var(--c-line); border-top: 3px solid var(--accent-strong); text-decoration: none;
+  transition: transform var(--dur-card) var(--ease-out), box-shadow var(--dur-card) var(--ease-out), border-color var(--dur-fast);
+}
+@media (hover: hover) and (pointer: fine) {
+  .norm-tile:hover { transform: translateY(-4px); box-shadow: 0 28px 60px -30px rgba(12,21,38,0.32); border-color: rgba(21,100,109,0.35); }
+  .norm-tile:hover .norm-tile__ghost { color: var(--c-petrol-100); }
+  .norm-tile:hover .norm-tile__link svg { transform: translateX(3px); }
+}
+.norm-tile__ghost {
+  position: absolute; right: -0.3rem; top: -0.9rem; z-index: 0; pointer-events: none; user-select: none;
+  font-family: var(--font-serif); font-weight: 400; line-height: 1; font-size: 4.5rem; color: var(--c-offwhite-300);
+  transition: color var(--dur-med) var(--ease-out);
+}
+.norm-tile__icon, .norm-tile__code, .norm-tile h3, .norm-tile p, .norm-tile__link { position: relative; z-index: 1; }
+.norm-tile__icon {
+  width: 46px; height: 46px; border-radius: var(--radius-sm); background: var(--c-petrol-100); color: var(--accent-strong);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem;
+}
+.norm-tile__code { display: block; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-bronze-500); margin-bottom: 0.35rem; }
+.norm-tile h3 { font-size: 1.05rem; color: var(--text-heading); }
+.norm-tile p { margin-top: 0.6rem; font-size: 0.92rem; color: var(--c-ink-500); flex-grow: 1; }
+.norm-tile__link { margin-top: 1.3rem; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; font-size: 0.88rem; color: var(--accent-strong); }
+.norm-tile__link svg { transition: transform var(--dur-fast) var(--ease-out); }
+@media (max-width: 960px) { .norm-showcase { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .norm-showcase { grid-template-columns: 1fr; } }
+
+/* --------------------------------------------------------------------------
+   Norm index — document-register treatment for the Leistungen overview
    -------------------------------------------------------------------------- */
 .norm-index { border-top: 1px solid var(--c-line); }
 .norm-index__row {

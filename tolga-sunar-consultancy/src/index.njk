@@ -4,7 +4,7 @@ title: "ISO-Beratung für KMU – Zertifizierung, Auditvorbereitung & Management
 description: "Tolga Sunar Consultancy begleitet kleine und mittelständische Unternehmen zu ISO 9001, ISO 14001, ISO 45001 und DIN 77200 – persönlich, strukturiert und auditsicher. Jetzt kostenloses Erstgespräch vereinbaren."
 bodyClass: "page-home"
 ---
-{% from "partials/macros.njk" import ctaBanner, faqAccordion, normIndex with context %}
+{% from "partials/macros.njk" import ctaBanner, faqAccordion, normShowcase with context %}
 {% from "partials/icons.njk" import icon %}
 
 <section class="hero">
@@ -95,7 +95,7 @@ bodyClass: "page-home"
       <h2 id="services-heading">Die passende Grundlage für Ihre Zertifizierung</h2>
       <p>Vier zentrale Normen, individuell oder kombiniert – jeweils mit einem klaren Weg von der Analyse bis zum Zertifikat.</p>
     </div>
-    {{ normIndex(services) }}
+    {{ normShowcase(services) }}
     <div class="center" style="margin-top:2.5rem;">
       <a class="btn btn-secondary" href="/leistungen/">Alle Leistungen im Überblick {{ icon("arrow") }}</a>
     </div>

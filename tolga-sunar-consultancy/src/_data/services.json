@@ -5,7 +5,8 @@
     "title": "ISO 9001 – Qualitätsmanagement",
     "teaser": "Qualität systematisch sichern, Prozesse verbessern und Kundenzufriedenheit strukturell stärken.",
     "url": "/leistungen/iso-9001/",
-    "icon": "target"
+    "icon": "target",
+    "ghost": "9001"
   },
   {
     "slug": "iso-14001",
@@ -13,7 +14,8 @@
     "title": "ISO 14001 – Umweltmanagement",
     "teaser": "Umweltwirkungen reduzieren, gesetzliche Anforderungen erfüllen und Ressourcen bewusster einsetzen.",
     "url": "/leistungen/iso-14001/",
-    "icon": "leaf"
+    "icon": "leaf",
+    "ghost": "14001"
   },
   {
     "slug": "iso-45001",
@@ -21,7 +23,8 @@
     "title": "ISO 45001 – Arbeits- und Gesundheitsschutz",
     "teaser": "Arbeitsrisiken strukturiert reduzieren und nachweisbar sichere Arbeitsbedingungen etablieren.",
     "url": "/leistungen/iso-45001/",
-    "icon": "shield"
+    "icon": "shield",
+    "ghost": "45001"
   },
   {
     "slug": "din-77200",
@@ -29,7 +32,8 @@
     "title": "DIN 77200 – Sicherheitsdienstleistungen",
     "teaser": "Nachweisbare Qualitäts- und Leistungsstandards für professionelle Sicherheitsdienstleister aufbauen.",
     "url": "/leistungen/din-77200/",
-    "icon": "lock"
+    "icon": "lock",
+    "ghost": "77200"
   },
   {
     "slug": "integrierte-managementsysteme",
@@ -37,7 +41,8 @@
     "title": "Integrierte Managementsysteme",
     "teaser": "Mehrere Normen sinnvoll verbinden – eine gemeinsame Struktur statt paralleler Einzelsysteme.",
     "url": "/leistungen/integrierte-managementsysteme/",
-    "icon": "layers"
+    "icon": "layers",
+    "ghost": "IMS"
   },
   {
     "slug": "auditvorbereitung-interne-audits",
@@ -45,6 +50,7 @@
     "title": "Auditvorbereitung & interne Audits",
     "teaser": "Wirksamkeit prüfen, Abweichungen früh erkennen und sicher durch das Zertifizierungsaudit gehen.",
     "url": "/leistungen/auditvorbereitung-interne-audits/",
-    "icon": "check"
+    "icon": "check",
+    "ghost": "AUD"
   }
 ]

@@ -8,8 +8,10 @@ tags: ["ratgeber"]
 date: 2026-01-15
 excerpt: "Ein praxisnaher Überblick, welche ISO-Norm für welches Unternehmen relevant ist – und wann sich eine Kombination lohnt."
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, articleSchema with context %}
 {% from "partials/icons.njk" import icon %}
+
+{{ articleSchema("Welche ISO-Norm passt zu meinem Unternehmen? Ein Überblick", excerpt, date | isoDate, page.url) }}
 
 <section class="page-hero">
   <div class="container page-hero__inner">
@@ -17,10 +19,11 @@ excerpt: "Ein praxisnaher Überblick, welche ISO-Norm für welches Unternehmen r
     <span class="eyebrow">Ratgeber</span>
     <h1>Welche ISO-Norm passt zu meinem Unternehmen?</h1>
     <p class="page-hero__lede">{{ excerpt }}</p>
+    <p class="page-hero__meta"><time datetime="{{ date | isoDate }}" style="color: rgba(250,248,244,0.6); font-size: 0.85rem;">Veröffentlicht am {{ date | readableDate }}</time></p>
   </div>
 </section>
 
-<section class="section section--surface">
+<article class="section section--surface">
   <div class="container container--narrow legal-content">
     <p>Für Unternehmen, die zum ersten Mal über eine Zertifizierung nachdenken, ist die Normlandschaft oft unübersichtlich. Dieser Überblick ordnet die vier für kleine und mittelständische Unternehmen relevantesten Regelwerke ein.</p>
 
@@ -41,7 +44,7 @@ excerpt: "Ein praxisnaher Überblick, welche ISO-Norm für welches Unternehmen r
 
     <p>Welche Norm oder Kombination für Ihr Unternehmen die richtige ist, hängt von Branche, Kundenanforderungen und strategischen Zielen ab. Im kostenlosen Erstgespräch ordnen wir Ihre konkrete Situation ein.</p>
   </div>
-</section>
+</article>
 
 <section class="section section--alt">
   <div class="container">

@@ -26,6 +26,43 @@
 </script>
 {% endmacro %}
 
+{% macro articleSchema(headline, description, isoDateStr, url) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ headline | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "datePublished": "{{ isoDateStr }}",
+  "dateModified": "{{ isoDateStr }}",
+  "inLanguage": "de-DE",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ url }}" },
+  "author": { "@type": "Person", "name": "{{ site.consultantName }}" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+{% endmacro %}
+
+{% macro normShowcase(items) %}
+{% from "partials/icons.njk" import icon %}
+<div class="norm-showcase" data-reveal-group>
+  {% for s in items %}
+  <a class="norm-tile" href="{{ s.url }}">
+    <span class="norm-tile__ghost" aria-hidden="true">{{ s.ghost }}</span>
+    <span class="norm-tile__icon">{{ icon(s.icon, 22) }}</span>
+    <span class="norm-tile__code">{{ s.shortTitle }}</span>
+    <h3>{{ s.title }}</h3>
+    <p>{{ s.teaser }}</p>
+    <span class="norm-tile__link">Mehr erfahren {{ icon("arrow") }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endmacro %}
+
 {% macro ctaBanner(eyebrow, heading, text, primaryLabel, primaryUrl, secondaryLabel, secondaryUrl, showContact) %}
 <div class="cta-banner" data-reveal>
   <div class="cta-banner__inner">

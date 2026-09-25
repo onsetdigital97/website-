@@ -26,7 +26,7 @@ permalink: /ratgeber/
           <span class="knowledge-card__tag">Ratgeber</span>
           <h3>{{ post.data.title }}</h3>
           <p>{{ post.data.excerpt }}</p>
-          <span class="knowledge-card__meta">{{ post.date | readableDate }}</span>
+          <span class="knowledge-card__meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></span>
         </div>
       </a>
       {% endfor %}

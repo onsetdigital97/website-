@@ -8,7 +8,9 @@ tags: ["ratgeber"]
 date: 2026-02-03
 excerpt: "Von der Dokumentenprüfung bis zur Zertifikatserteilung: ein Überblick über den typischen Ablauf eines Zertifizierungsaudits."
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, articleSchema with context %}
+
+{{ articleSchema("Ablauf eines Zertifizierungsaudits: Was Sie erwartet", excerpt, date | isoDate, page.url) }}
 
 <section class="page-hero">
   <div class="container page-hero__inner">
@@ -16,10 +18,11 @@ excerpt: "Von der Dokumentenprüfung bis zur Zertifikatserteilung: ein Überblic
     <span class="eyebrow">Ratgeber</span>
     <h1>Ablauf eines Zertifizierungsaudits: Was Sie erwartet</h1>
     <p class="page-hero__lede">{{ excerpt }}</p>
+    <p class="page-hero__meta"><time datetime="{{ date | isoDate }}" style="color: rgba(250,248,244,0.6); font-size: 0.85rem;">Veröffentlicht am {{ date | readableDate }}</time></p>
   </div>
 </section>
 
-<section class="section section--surface">
+<article class="section section--surface">
   <div class="container container--narrow legal-content">
     <p>Viele Unternehmen sind vor ihrem ersten Zertifizierungsaudit unsicher, was sie konkret erwartet. Der Ablauf folgt bei den meisten akkreditierten Zertifizierungsstellen einem vergleichbaren Muster.</p>
 
@@ -38,7 +41,7 @@ excerpt: "Von der Dokumentenprüfung bis zur Zertifikatserteilung: ein Überblic
     <h2>Warum sich eine strukturierte Vorbereitung lohnt</h2>
     <p>Ein internes Audit vor dem eigentlichen Zertifizierungsaudit deckt Schwachstellen frühzeitig auf und gibt Ihrem Team Sicherheit im Umgang mit typischen Auditfragen. Das reduziert das Risiko schwerwiegender Abweichungen erheblich.</p>
   </div>
-</section>
+</article>
 
 <section class="section section--alt">
   <div class="container">
