@@ -5,7 +5,7 @@ description: "ISO 14001 Beratung: Umweltmanagementsystem aufbauen, gesetzliche A
 bodyClass: "page-service"
 permalink: /leistungen/iso-14001/
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion, factStrip with context %}
 {% from "partials/icons.njk" import icon %}
 
 {% set faqIso14001 = [
@@ -29,6 +29,15 @@ permalink: /leistungen/iso-14001/
   </div>
 </section>
 
+<div class="container">
+  {{ factStrip([
+    { value: "Umweltmanagement", label: "Fokus der Norm" },
+    { value: "Alle Branchen", label: "Anwendungsbereich" },
+    { value: "3 Jahre", label: "Zertifikatsgültigkeit" },
+    { value: "Jährlich", label: "Überwachungsaudit" }
+  ]) }}
+</div>
+
 <section class="section section--surface">
   <div class="container two-col">
     <div data-reveal>
@@ -46,11 +55,11 @@ permalink: /leistungen/iso-14001/
       <span class="eyebrow">Ziele &amp; Nutzen</span>
       <h2>Was Sie mit ISO 14001 erreichen</h2>
       <p style="margin-top:1rem; color: var(--c-ink-500);">Ein Umweltmanagementsystem schafft Transparenz über Ihre wesentlichen Umweltaspekte, unterstützt bei der Einhaltung rechtlicher Vorgaben und macht Verbesserungen messbar. Viele Unternehmen senken dabei zugleich ihre Energie- und Entsorgungskosten.</p>
-      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;">
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Rechtssicherheit</h3><p>Systematische Erfassung geltender Umweltvorschriften.</p></div>
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Kosteneinsparungen</h3><p>Bewussterer Umgang mit Energie und Ressourcen.</p></div>
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Glaubwürdige Kommunikation</h3><p>Nachweisbare statt behauptete Nachhaltigkeit.</p></div>
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Ausschreibungsvorteile</h3><p>Erfüllung von Umweltkriterien bei Vergaben.</p></div>
+      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;" data-reveal-group>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("file", 20) }}</span><h3 style="font-size:0.95rem;">Rechtssicherheit</h3><p>Systematische Erfassung geltender Umweltvorschriften.</p></div>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("euro", 20) }}</span><h3 style="font-size:0.95rem;">Kosteneinsparungen</h3><p>Bewussterer Umgang mit Energie und Ressourcen.</p></div>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("award", 20) }}</span><h3 style="font-size:0.95rem;">Glaubwürdige Kommunikation</h3><p>Nachweisbare statt behauptete Nachhaltigkeit.</p></div>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("compass", 20) }}</span><h3 style="font-size:0.95rem;">Ausschreibungsvorteile</h3><p>Erfüllung von Umweltkriterien bei Vergaben.</p></div>
       </div>
     </div>
   </div>
@@ -64,36 +73,63 @@ permalink: /leistungen/iso-14001/
       <p>Die zentralen Bausteine – nachvollziehbar erklärt.</p>
     </div>
     <div class="grid grid-4" data-reveal-group>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Umweltaspekte ermitteln</h3><p>Sie identifizieren, welche Tätigkeiten und Prozesse die Umwelt tatsächlich beeinflussen.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Rechtskataster führen</h3><p>Relevante gesetzliche Anforderungen werden erfasst und regelmäßig aktualisiert.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Ziele &amp; Programme</h3><p>Konkrete, messbare Umweltziele werden geplant und verfolgt.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Notfallvorsorge</h3><p>Für mögliche Umweltnotfälle bestehen vorbereitete Reaktionspläne.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("leaf", 20) }}</span><h3 style="font-size:1rem;">Umweltaspekte ermitteln</h3><p>Sie identifizieren, welche Tätigkeiten und Prozesse die Umwelt tatsächlich beeinflussen.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("file", 20) }}</span><h3 style="font-size:1rem;">Rechtskataster führen</h3><p>Relevante gesetzliche Anforderungen werden erfasst und regelmäßig aktualisiert.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("target", 20) }}</span><h3 style="font-size:1rem;">Ziele &amp; Programme</h3><p>Konkrete, messbare Umweltziele werden geplant und verfolgt.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("alert", 20) }}</span><h3 style="font-size:1rem;">Notfallvorsorge</h3><p>Für mögliche Umweltnotfälle bestehen vorbereitete Reaktionspläne.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section section--surface">
-  <div class="container two-col">
-    <div data-reveal>
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
       <span class="eyebrow">Unsere Leistungen</span>
       <h2>Konkrete Beratungsleistungen für Ihre ISO-14001-Einführung</h2>
-      <ul class="icon-list" style="margin-top:1.5rem;">
-        <li>{{ icon("check", 18) }}<span>Ermittlung und Bewertung Ihrer wesentlichen Umweltaspekte</span></li>
-        <li>{{ icon("check", 18) }}<span>Aufbau eines Rechtskatasters relevanter Umweltvorschriften</span></li>
-        <li>{{ icon("check", 18) }}<span>Entwicklung von Umweltzielen, Kennzahlen und Maßnahmenprogrammen</span></li>
-        <li>{{ icon("check", 18) }}<span>Erstellung der erforderlichen Dokumentation und Verfahrensanweisungen</span></li>
-        <li>{{ icon("check", 18) }}<span>Schulung von Umweltmanagementbeauftragten und Mitarbeitenden</span></li>
-        <li>{{ icon("check", 18) }}<span>Internes Audit und Begleitung des Zertifizierungsaudits</span></li>
-      </ul>
     </div>
-    <div class="numbered-mini" data-reveal-group>
-      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Zieldefinition</strong><p>Umweltrelevante Tätigkeiten und Zielsetzung klären.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Umweltaspekte-Analyse</strong><p>Wesentliche Einwirkungen identifizieren und bewerten.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Konzeption &amp; Dokumentation</strong><p>Rechtskataster, Ziele und Verfahren erarbeiten.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung &amp; Schulung</strong><p>System im Betrieb verankern.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit prüfen, Lücken schließen.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Zertifizierungsaudit</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    <ul class="icon-list" data-reveal-group>
+      <li>{{ icon("check", 18) }}<span>Ermittlung und Bewertung Ihrer wesentlichen Umweltaspekte</span></li>
+      <li>{{ icon("check", 18) }}<span>Aufbau eines Rechtskatasters relevanter Umweltvorschriften</span></li>
+      <li>{{ icon("check", 18) }}<span>Entwicklung von Umweltzielen, Kennzahlen und Maßnahmenprogrammen</span></li>
+      <li>{{ icon("check", 18) }}<span>Erstellung der erforderlichen Dokumentation und Verfahrensanweisungen</span></li>
+      <li>{{ icon("check", 18) }}<span>Schulung von Umweltmanagementbeauftragten und Mitarbeitenden</span></li>
+      <li>{{ icon("check", 18) }}<span>Internes Audit und Begleitung des Zertifizierungsaudits</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Projektablauf</span>
+      <h2>So läuft Ihre ISO-14001-Einführung ab</h2>
+    </div>
+    <div class="process-list" data-process-rail>
+      <div class="process-rail" aria-hidden="true"><div class="process-rail__fill" data-rail-fill></div></div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">01</span>
+        <div class="process-step__body"><h3>Erstgespräch &amp; Zieldefinition</h3><p>Umweltrelevante Tätigkeiten und Zielsetzung klären.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">02</span>
+        <div class="process-step__body"><h3>Umweltaspekte-Analyse</h3><p>Wesentliche Einwirkungen identifizieren und bewerten.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">03</span>
+        <div class="process-step__body"><h3>Konzeption &amp; Dokumentation</h3><p>Rechtskataster, Ziele und Verfahren erarbeiten.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">04</span>
+        <div class="process-step__body"><h3>Implementierung &amp; Schulung</h3><p>System im Betrieb verankern.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">05</span>
+        <div class="process-step__body"><h3>Internes Audit</h3><p>Wirksamkeit prüfen, Lücken schließen.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">06</span>
+        <div class="process-step__body"><h3>Zertifizierungsaudit</h3><p>Begleitung durch das externe Audit.</p></div>
+      </div>
     </div>
   </div>
 </section>

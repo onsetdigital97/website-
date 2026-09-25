@@ -5,7 +5,7 @@ description: "DIN 77200 Beratung für Sicherheitsdienstleister: Anforderungen de
 bodyClass: "page-service"
 permalink: /leistungen/din-77200/
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion, factStrip with context %}
 {% from "partials/icons.njk" import icon %}
 
 {% set faqDin77200 = [
@@ -29,6 +29,15 @@ permalink: /leistungen/din-77200/
   </div>
 </section>
 
+<div class="container">
+  {{ factStrip([
+    { value: "Sicherheitsdienstleistungen", label: "Fokus der Norm" },
+    { value: "Gestaffelt", label: "Sicherheitsstufen" },
+    { value: "3 Jahre", label: "Zertifikatsgültigkeit" },
+    { value: "Häufig", label: "Vergabekriterium" }
+  ]) }}
+</div>
+
 <section class="section section--surface">
   <div class="container two-col">
     <div data-reveal>
@@ -45,11 +54,11 @@ permalink: /leistungen/din-77200/
       <span class="eyebrow">Ziele &amp; Nutzen</span>
       <h2>Was Sie mit DIN 77200 erreichen</h2>
       <p style="margin-top:1rem; color: var(--c-ink-500);">Eine Zertifizierung nach DIN 77200 macht Ihre Leistungsfähigkeit als Sicherheitsdienstleister nachvollziehbar und belastbar – gegenüber Auftraggebern, Ausschreibungsstellen und im eigenen Qualitätsmanagement.</p>
-      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;">
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Ausschreibungsfähigkeit</h3><p>Erfüllung eines häufig geforderten Vergabekriteriums.</p></div>
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Nachvollziehbare Personalprozesse</h3><p>Auswahl, Qualifikation und Einsatz klar dokumentiert.</p></div>
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Höhere Auftraggeber-Sicherheit</h3><p>Belastbare Nachweise statt bloßer Zusagen.</p></div>
-        <div class="benefit-card"><h3 style="font-size:0.95rem;">Differenzierung im Wettbewerb</h3><p>Sichtbarer Qualitätsvorsprung am Markt.</p></div>
+      <div class="grid grid-2" style="margin-top:1.5rem; gap:1rem;" data-reveal-group>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("award", 20) }}</span><h3 style="font-size:0.95rem;">Ausschreibungsfähigkeit</h3><p>Erfüllung eines häufig geforderten Vergabekriteriums.</p></div>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("users", 20) }}</span><h3 style="font-size:0.95rem;">Nachvollziehbare Personalprozesse</h3><p>Auswahl, Qualifikation und Einsatz klar dokumentiert.</p></div>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("shield", 20) }}</span><h3 style="font-size:0.95rem;">Höhere Auftraggeber-Sicherheit</h3><p>Belastbare Nachweise statt bloßer Zusagen.</p></div>
+        <div class="benefit-card"><span class="benefit-card__icon">{{ icon("compass", 20) }}</span><h3 style="font-size:0.95rem;">Differenzierung im Wettbewerb</h3><p>Sichtbarer Qualitätsvorsprung am Markt.</p></div>
       </div>
     </div>
   </div>
@@ -63,35 +72,62 @@ permalink: /leistungen/din-77200/
       <p>Die zentralen Bausteine – nachvollziehbar erklärt.</p>
     </div>
     <div class="grid grid-4" data-reveal-group>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Personalqualifikation</h3><p>Nachweisbare Auswahl, Schulung und Eignung des eingesetzten Personals.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Einsatzplanung</h3><p>Nachvollziehbare Planung und Steuerung der Sicherheitsdienstleistungen.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Dokumentation &amp; Nachweise</h3><p>Lückenlose Dokumentation von Einsätzen entsprechend der Sicherheitsstufe.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Qualitätssicherung</h3><p>Regelmäßige Überprüfung und Verbesserung der Leistungserbringung.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("users", 20) }}</span><h3 style="font-size:1rem;">Personalqualifikation</h3><p>Nachweisbare Auswahl, Schulung und Eignung des eingesetzten Personals.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("compass", 20) }}</span><h3 style="font-size:1rem;">Einsatzplanung</h3><p>Nachvollziehbare Planung und Steuerung der Sicherheitsdienstleistungen.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("file", 20) }}</span><h3 style="font-size:1rem;">Dokumentation &amp; Nachweise</h3><p>Lückenlose Dokumentation von Einsätzen entsprechend der Sicherheitsstufe.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("refresh", 20) }}</span><h3 style="font-size:1rem;">Qualitätssicherung</h3><p>Regelmäßige Überprüfung und Verbesserung der Leistungserbringung.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section section--surface">
-  <div class="container two-col">
-    <div data-reveal>
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
       <span class="eyebrow">Unsere Leistungen</span>
       <h2>Konkrete Beratungsleistungen für Ihre DIN-77200-Zertifizierung</h2>
-      <ul class="icon-list" style="margin-top:1.5rem;">
-        <li>{{ icon("check", 18) }}<span>Einordnung der für Sie relevanten Sicherheitsstufe</span></li>
-        <li>{{ icon("check", 18) }}<span>Aufbau normgerechter Personal- und Einsatzdokumentation</span></li>
-        <li>{{ icon("check", 18) }}<span>Entwicklung von Nachweis- und Kontrollprozessen</span></li>
-        <li>{{ icon("check", 18) }}<span>Schulung von Führungskräften und Einsatzverantwortlichen</span></li>
-        <li>{{ icon("check", 18) }}<span>Internes Audit und Begleitung des Zertifizierungsaudits</span></li>
-      </ul>
     </div>
-    <div class="numbered-mini" data-reveal-group>
-      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Einordnung</strong><p>Relevante Sicherheitsstufe und Ziele klären.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Gap-Analyse</strong><p>Bestehende Prozesse mit Normanforderungen abgleichen.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Konzeption &amp; Dokumentation</strong><p>Personal-, Einsatz- und Nachweisprozesse erarbeiten.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung &amp; Schulung</strong><p>Führungskräfte und Einsatzteams befähigen.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit und Nachweisführung prüfen.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Zertifizierungsaudit</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    <ul class="icon-list" data-reveal-group>
+      <li>{{ icon("check", 18) }}<span>Einordnung der für Sie relevanten Sicherheitsstufe</span></li>
+      <li>{{ icon("check", 18) }}<span>Aufbau normgerechter Personal- und Einsatzdokumentation</span></li>
+      <li>{{ icon("check", 18) }}<span>Entwicklung von Nachweis- und Kontrollprozessen</span></li>
+      <li>{{ icon("check", 18) }}<span>Schulung von Führungskräften und Einsatzverantwortlichen</span></li>
+      <li>{{ icon("check", 18) }}<span>Internes Audit und Begleitung des Zertifizierungsaudits</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Projektablauf</span>
+      <h2>So läuft Ihre DIN-77200-Zertifizierung ab</h2>
+    </div>
+    <div class="process-list" data-process-rail>
+      <div class="process-rail" aria-hidden="true"><div class="process-rail__fill" data-rail-fill></div></div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">01</span>
+        <div class="process-step__body"><h3>Erstgespräch &amp; Einordnung</h3><p>Relevante Sicherheitsstufe und Ziele klären.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">02</span>
+        <div class="process-step__body"><h3>Gap-Analyse</h3><p>Bestehende Prozesse mit Normanforderungen abgleichen.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">03</span>
+        <div class="process-step__body"><h3>Konzeption &amp; Dokumentation</h3><p>Personal-, Einsatz- und Nachweisprozesse erarbeiten.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">04</span>
+        <div class="process-step__body"><h3>Implementierung &amp; Schulung</h3><p>Führungskräfte und Einsatzteams befähigen.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">05</span>
+        <div class="process-step__body"><h3>Internes Audit</h3><p>Wirksamkeit und Nachweisführung prüfen.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">06</span>
+        <div class="process-step__body"><h3>Zertifizierungsaudit</h3><p>Begleitung durch das externe Audit.</p></div>
+      </div>
     </div>
   </div>
 </section>

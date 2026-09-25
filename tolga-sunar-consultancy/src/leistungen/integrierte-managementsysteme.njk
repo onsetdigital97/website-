@@ -5,7 +5,7 @@ description: "Integriertes Managementsystem aus ISO 9001, ISO 14001 und ISO 4500
 bodyClass: "page-service"
 permalink: /leistungen/integrierte-managementsysteme/
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion, factStrip with context %}
 {% from "partials/icons.njk" import icon %}
 
 {% set faqIms = [
@@ -28,6 +28,15 @@ permalink: /leistungen/integrierte-managementsysteme/
     </div>
   </div>
 </section>
+
+<div class="container">
+  {{ factStrip([
+    { value: "9001 · 14001 · 45001", label: "Kombinierbare Normen" },
+    { value: "High-Level-Structure", label: "Gemeinsamer Rahmen" },
+    { value: "Ein Turnus", label: "Auditzyklus" },
+    { value: "Erweiterbar", label: "Spätere Ergänzung" }
+  ]) }}
+</div>
 
 <section class="section section--surface">
   <div class="container two-col">
@@ -57,36 +66,63 @@ permalink: /leistungen/integrierte-managementsysteme/
       <p>Die High-Level-Structure bildet den gemeinsamen Rahmen aller relevanten ISO-Managementsystemnormen.</p>
     </div>
     <div class="grid grid-4" data-reveal-group>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Kontext &amp; Führung</h3><p>Ein gemeinsames Verständnis von Organisation, Stakeholdern und Verantwortung.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Planung &amp; Risiken</h3><p>Risiken und Chancen werden themenübergreifend bewertet.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Betrieb &amp; Dokumentation</h3><p>Ein Dokumentenlenkungssystem für alle integrierten Bereiche.</p></div>
-      <div class="benefit-card"><h3 style="font-size:1rem;">Bewertung &amp; Verbesserung</h3><p>Ein gemeinsamer Audit- und Managementbewertungszyklus.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("building", 20) }}</span><h3 style="font-size:1rem;">Kontext &amp; Führung</h3><p>Ein gemeinsames Verständnis von Organisation, Stakeholdern und Verantwortung.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("alert", 20) }}</span><h3 style="font-size:1rem;">Planung &amp; Risiken</h3><p>Risiken und Chancen werden themenübergreifend bewertet.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("file", 20) }}</span><h3 style="font-size:1rem;">Betrieb &amp; Dokumentation</h3><p>Ein Dokumentenlenkungssystem für alle integrierten Bereiche.</p></div>
+      <div class="benefit-card"><span class="benefit-card__icon">{{ icon("refresh", 20) }}</span><h3 style="font-size:1rem;">Bewertung &amp; Verbesserung</h3><p>Ein gemeinsamer Audit- und Managementbewertungszyklus.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section section--surface">
-  <div class="container two-col">
-    <div data-reveal>
+  <div class="container container--narrow">
+    <div class="section-head section-head--center">
       <span class="eyebrow">Unsere Leistungen</span>
       <h2>So begleiten wir Ihr integriertes Managementsystem</h2>
-      <ul class="icon-list" style="margin-top:1.5rem;">
-        <li>{{ icon("check", 18) }}<span>Analyse, welche Normen für Ihr Unternehmen sinnvoll kombinierbar sind</span></li>
-        <li>{{ icon("check", 18) }}<span>Entwicklung einer gemeinsamen Prozess- und Dokumentationsstruktur</span></li>
-        <li>{{ icon("check", 18) }}<span>Zusammenführung bestehender Einzelsysteme, sofern bereits vorhanden</span></li>
-        <li>{{ icon("check", 18) }}<span>Konzeption eines gemeinsamen internen Auditprogramms</span></li>
-        <li>{{ icon("check", 18) }}<span>Schulung der intern Verantwortlichen für alle integrierten Bereiche</span></li>
-        <li>{{ icon("check", 18) }}<span>Begleitung der kombinierten Zertifizierungsaudits</span></li>
-      </ul>
     </div>
-    <div class="numbered-mini" data-reveal-group>
-      <span class="eyebrow" style="margin-bottom:0.5rem; display:block;">Projektablauf</span>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">01</span><div><strong>Erstgespräch &amp; Normauswahl</strong><p>Relevante Normkombination festlegen.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">02</span><div><strong>Gap-Analyse je Norm</strong><p>Gemeinsame und normspezifische Lücken identifizieren.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">03</span><div><strong>Integrierte Konzeption</strong><p>Ein Handbuch, gemeinsame Prozesse und Vorlagen erarbeiten.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">04</span><div><strong>Implementierung &amp; Schulung</strong><p>System normübergreifend im Unternehmen verankern.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">05</span><div><strong>Internes Audit</strong><p>Wirksamkeit über alle Normen hinweg prüfen.</p></div></div>
-      <div class="numbered-mini__item"><span class="numbered-mini__num">06</span><div><strong>Kombinierte Zertifizierung</strong><p>Begleitung durch das externe Audit.</p></div></div>
+    <ul class="icon-list" data-reveal-group>
+      <li>{{ icon("check", 18) }}<span>Analyse, welche Normen für Ihr Unternehmen sinnvoll kombinierbar sind</span></li>
+      <li>{{ icon("check", 18) }}<span>Entwicklung einer gemeinsamen Prozess- und Dokumentationsstruktur</span></li>
+      <li>{{ icon("check", 18) }}<span>Zusammenführung bestehender Einzelsysteme, sofern bereits vorhanden</span></li>
+      <li>{{ icon("check", 18) }}<span>Konzeption eines gemeinsamen internen Auditprogramms</span></li>
+      <li>{{ icon("check", 18) }}<span>Schulung der intern Verantwortlichen für alle integrierten Bereiche</span></li>
+      <li>{{ icon("check", 18) }}<span>Begleitung der kombinierten Zertifizierungsaudits</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow">Projektablauf</span>
+      <h2>So entsteht Ihr integriertes Managementsystem</h2>
+    </div>
+    <div class="process-list" data-process-rail>
+      <div class="process-rail" aria-hidden="true"><div class="process-rail__fill" data-rail-fill></div></div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">01</span>
+        <div class="process-step__body"><h3>Erstgespräch &amp; Normauswahl</h3><p>Relevante Normkombination festlegen.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">02</span>
+        <div class="process-step__body"><h3>Gap-Analyse je Norm</h3><p>Gemeinsame und normspezifische Lücken identifizieren.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">03</span>
+        <div class="process-step__body"><h3>Integrierte Konzeption</h3><p>Ein Handbuch, gemeinsame Prozesse und Vorlagen erarbeiten.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">04</span>
+        <div class="process-step__body"><h3>Implementierung &amp; Schulung</h3><p>System normübergreifend im Unternehmen verankern.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">05</span>
+        <div class="process-step__body"><h3>Internes Audit</h3><p>Wirksamkeit über alle Normen hinweg prüfen.</p></div>
+      </div>
+      <div class="process-step" data-reveal data-process-step>
+        <span class="process-step__num">06</span>
+        <div class="process-step__body"><h3>Kombinierte Zertifizierung</h3><p>Begleitung durch das externe Audit.</p></div>
+      </div>
     </div>
   </div>
 </section>
