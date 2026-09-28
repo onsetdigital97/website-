@@ -5,7 +5,7 @@ description: "Antworten auf häufige Fragen zu ISO-Zertifizierung, Ablauf, Koste
 bodyClass: "page-faq"
 permalink: /faq/
 ---
-{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion with context %}
+{% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion, factStrip with context %}
 
 <section class="page-hero">
   <div class="container page-hero__inner">
@@ -15,6 +15,15 @@ permalink: /faq/
     <p class="page-hero__lede">Sollte Ihre Frage hier nicht beantwortet sein, klären wir sie gerne persönlich im kostenlosen Erstgespräch.</p>
   </div>
 </section>
+
+<div class="container">
+  {{ factStrip([
+    { value: faqGlobal.length, label: "Beantwortete Fragen" },
+    { value: "Kostenlos", label: "Erstgespräch" },
+    { value: "2 Werktage", label: "Rückmeldezeit" },
+    { value: "Persönlich", label: "Statt Standardantwort" }
+  ]) }}
+</div>
 
 <section class="section section--surface">
   <div class="container container--narrow">

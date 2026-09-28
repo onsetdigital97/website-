@@ -78,6 +78,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 [hidden] { display: none !important; }
+::selection { background: var(--c-bronze-300); color: var(--c-navy-900); }
+.fact-item__value, .stat__num, .process-step__num, .hero__panel-num, .norm-tile__ghost, .norm-index__code, .numbered-mini__num {
+  font-variant-numeric: tabular-nums;
+}
 img, picture, svg { display: block; max-width: 100%; }
 img { height: auto; }
 a { color: inherit; }
@@ -515,7 +519,11 @@ p { max-width: 68ch; }
   .benefit-ledger__col, .benefit-ledger__col + .benefit-ledger__col { padding-inline: 0; border-left: none; }
 }
 
-.benefit-card { padding: 1.9rem; border-radius: var(--radius-md); background: var(--bg-surface); border: 1px solid var(--c-line); height: 100%; }
+.benefit-card {
+  padding: 1.9rem; border-radius: var(--radius-md); background: var(--bg-surface);
+  border: 1px solid var(--c-line); border-top: 3px solid var(--c-bronze-300); height: 100%;
+  box-shadow: 0 16px 32px -26px rgba(12,21,38,0.18);
+}
 .benefit-card__icon { width: 44px; height: 44px; border-radius: 999px; background: var(--c-navy-900); color: var(--c-bronze-300); display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
 .benefit-card h3 { font-size: 1.05rem; }
 .benefit-card p { margin-top: 0.55rem; font-size: 0.92rem; color: var(--c-ink-500); }
@@ -611,7 +619,12 @@ p { max-width: 68ch; }
 .citation-item { padding: 1.85rem 1.75rem; border-right: 1px solid var(--c-line); display: flex; flex-direction: column; height: 100%; }
 .citation-item:last-child { border-right: none; }
 .citation-item__mark { font-family: var(--font-serif); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-bronze-500); }
-.citation-item blockquote { margin: 1rem 0 0; font-family: var(--font-serif); font-style: italic; font-size: 1.05rem; color: var(--text-heading); flex-grow: 1; }
+.citation-item blockquote { margin: 0.6rem 0 0; font-family: var(--font-serif); font-style: italic; font-size: 1.05rem; color: var(--text-heading); flex-grow: 1; }
+.citation-item blockquote::before {
+  content: "\201C"; display: block; font-style: normal; line-height: 1;
+  font-size: 2.75rem; color: var(--c-bronze-500); opacity: 0.55; margin-bottom: -0.4rem;
+}
+.citation-grid--dark .citation-item blockquote::before { color: var(--c-bronze-300); }
 .citation-item cite { margin-top: 1.3rem; padding-top: 1rem; border-top: 1px solid var(--c-line); display: block; font-style: normal; font-size: 0.82rem; }
 .citation-item cite strong { display: block; color: var(--text-heading); }
 .citation-item cite span { color: var(--c-ink-500); }
