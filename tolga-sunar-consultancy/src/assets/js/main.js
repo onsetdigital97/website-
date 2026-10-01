@@ -91,44 +91,6 @@
     window.addEventListener("resize", onRailScroll);
   }
 
-  /* Animated counters */
-  var counters = document.querySelectorAll("[data-count-to]");
-  if ("IntersectionObserver" in window && counters.length) {
-    var animateCount = function (el) {
-      var target = parseFloat(el.getAttribute("data-count-to"));
-      var suffix = el.getAttribute("data-count-suffix") || "";
-      var duration = 1200;
-      var start = null;
-
-      function step(timestamp) {
-        if (!start) start = timestamp;
-        var progress = Math.min((timestamp - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - progress, 3);
-        var value = target < 10 && target % 1 !== 0 ? (eased * target).toFixed(1) : Math.round(eased * target);
-        el.textContent = value + suffix;
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        }
-      }
-      window.requestAnimationFrame(step);
-    };
-
-    var countIo = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            countIo.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-    counters.forEach(function (el) {
-      countIo.observe(el);
-    });
-  }
-
   /* Contact form handling */
   var form = document.querySelector("[data-contact-form]");
   if (form) {
