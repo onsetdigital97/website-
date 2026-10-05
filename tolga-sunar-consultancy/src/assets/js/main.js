@@ -62,7 +62,7 @@
         var vh = window.innerHeight;
         var progress = (vh - rect.top) / (vh + rect.height);
         var clamped = Math.min(Math.max(progress, 0), 1);
-        var offset = (clamped - 0.5) * 56;
+        var offset = (clamped - 0.5) * 32;
         img.style.transform = "translateY(" + offset.toFixed(1) + "px)";
       });
     };

@@ -1,3 +1,10 @@
+{% from "partials/icons.njk" import icon %}
+<div class="header-utility">
+  <div class="container header-utility__inner">
+    <a href="tel:{{ site.phoneHref }}">{{ icon("phone", 13) }}{{ site.phone }}</a>
+    <a href="mailto:{{ site.email }}">{{ icon("mail", 13) }}{{ site.email }}</a>
+  </div>
+</div>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="/">
@@ -31,7 +38,7 @@
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn-primary btn-sm" href="/kontakt/">Kostenloses Erstgespräch</a>
+      <a class="btn btn-primary btn-sm btn-pill" href="/kontakt/">Kostenloses Erstgespräch {{ icon("arrow") }}</a>
       <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false">
         <span class="nav-toggle__box"><span></span><span></span><span></span></span>
       </button>
