@@ -594,7 +594,7 @@ p { max-width: 68ch; }
 /* --------------------------------------------------------------------------
    About / Consultant — full-bleed editorial layout
    -------------------------------------------------------------------------- */
-.about-bleed { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1680px; margin-inline: auto; background: var(--bg-surface); }
+.about-bleed { display: grid; grid-template-columns: 2fr 3fr; align-items: stretch; max-width: 1680px; margin-inline: auto; background: var(--bg-surface); }
 .about-bleed--alt { background: var(--c-offwhite-200); }
 .about-bleed__media {
   position: relative; overflow: hidden; align-self: start; aspect-ratio: 580 / 948;
