@@ -1,7 +1,7 @@
 {% from "partials/icons.njk" import icon %}
 <div class="header-utility">
   <div class="container header-utility__inner">
-    <a href="tel:{{ site.phoneHref }}">{{ icon("phone", 13) }}{{ site.phone }}</a>
+    <a href="{{ site.phoneHref }}">{{ icon("phone", 13) }}{{ site.phone }}</a>
     <a href="mailto:{{ site.email }}">{{ icon("mail", 13) }}{{ site.email }}</a>
   </div>
 </div>

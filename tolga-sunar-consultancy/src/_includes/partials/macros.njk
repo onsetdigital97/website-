@@ -86,7 +86,7 @@
       {% if secondaryLabel %}<a class="btn btn-ghost-on-dark" href="{{ secondaryUrl }}">{{ secondaryLabel }}</a>{% endif %}
       {% if showContact %}
       <div class="cta-banner__contact">
-        <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+        <a href="{{ site.phoneHref }}">{{ site.phone }}</a>
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       </div>
       {% endif %}
