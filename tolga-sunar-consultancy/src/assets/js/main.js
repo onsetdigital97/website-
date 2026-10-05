@@ -53,6 +53,33 @@
     });
   }
 
+  /* Portrait parallax */
+  var parallaxImgs = document.querySelectorAll(".about-bleed__img");
+  if (parallaxImgs.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var updateParallax = function () {
+      parallaxImgs.forEach(function (img) {
+        var rect = img.parentElement.getBoundingClientRect();
+        var vh = window.innerHeight;
+        var progress = (vh - rect.top) / (vh + rect.height);
+        var clamped = Math.min(Math.max(progress, 0), 1);
+        var offset = (clamped - 0.5) * 56;
+        img.style.transform = "translateY(" + offset.toFixed(1) + "px)";
+      });
+    };
+    var parallaxTicking = false;
+    var onParallaxScroll = function () {
+      if (parallaxTicking) return;
+      parallaxTicking = true;
+      window.requestAnimationFrame(function () {
+        updateParallax();
+        parallaxTicking = false;
+      });
+    };
+    updateParallax();
+    window.addEventListener("scroll", onParallaxScroll, { passive: true });
+    window.addEventListener("resize", onParallaxScroll);
+  }
+
   /* Process rail: scroll-linked progress line through the Vorgehensweise steps */
   var railList = document.querySelector("[data-process-rail]");
   if (railList) {
