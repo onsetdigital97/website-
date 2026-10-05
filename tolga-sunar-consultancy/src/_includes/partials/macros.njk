@@ -112,7 +112,7 @@
 {% endmacro %}
 
 {% macro faqAccordion(items, idPrefix) %}
-<div class="faq-list">
+<div class="faq-list" data-reveal-group>
   {% for item in items %}
   <details class="faq-item" {% if loop.first %}open{% endif %}>
     <summary>
