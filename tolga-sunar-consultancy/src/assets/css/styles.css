@@ -581,27 +581,29 @@ p { max-width: 68ch; }
 .integration-benefit span { font-size: 0.9rem; color: var(--c-ink-500); }
 
 /* --------------------------------------------------------------------------
-   About / Consultant
+   About / Consultant — full-bleed editorial layout
    -------------------------------------------------------------------------- */
-.about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.5rem; align-items: center; }
-.about-portrait {
-  aspect-ratio: 4 / 5; border-radius: var(--radius-lg); background: linear-gradient(160deg, var(--c-navy-800), var(--c-navy-900));
-  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px solid var(--c-line);
-}
-.about-portrait::before {
-  content: ""; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 34px 34px;
-}
-.about-portrait__img {
-  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%;
+.about-bleed { display: grid; grid-template-columns: minmax(300px, 36vw) 1fr; align-items: stretch; background: var(--bg-surface); }
+.about-bleed--alt { background: var(--c-offwhite-200); }
+.about-bleed__media { position: relative; overflow: hidden; min-height: 460px; background: linear-gradient(160deg, var(--c-navy-800), var(--c-navy-900)); }
+.about-bleed__media .reveal-clip__mask { position: absolute; inset: 0; width: 100%; height: 100%; }
+.about-bleed__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; }
+.about-bleed__content { display: flex; align-items: center; padding-block: clamp(3rem, 6vw, 5rem); }
+.about-bleed__inner { max-width: 640px; padding-inline: clamp(1.5rem, 5vw, 5rem) 1.5rem; }
+.about-bleed__mark {
+  display: block; font-family: var(--font-serif); font-size: 3.2rem; line-height: 1; font-style: normal;
+  color: var(--c-bronze-500); opacity: 0.65; margin-top: 1.4rem; margin-bottom: -0.6rem;
 }
 .about-quote { margin-top: 1.8rem; padding-left: 1.25rem; border-left: 3px solid var(--gold); font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--text-heading); }
 .about-quote cite { display: block; margin-top: 0.75rem; font-family: var(--font-sans); font-style: normal; font-size: 0.85rem; font-weight: 600; color: var(--c-ink-500); }
 .about-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.5rem; margin-top: 1.8rem; }
 .about-facts dt { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-strong); font-weight: 700; }
 .about-facts dd { margin: 0.25rem 0 0; font-size: 0.92rem; color: var(--c-ink-700); }
-@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .about-portrait { max-width: 340px; } }
+@media (max-width: 860px) {
+  .about-bleed { grid-template-columns: 1fr; }
+  .about-bleed__media { aspect-ratio: 4 / 5; min-height: auto; }
+  .about-bleed__inner { padding-inline: 1.5rem; max-width: none; }
+}
 
 /* --------------------------------------------------------------------------
    Citation grid
@@ -797,10 +799,14 @@ p { max-width: 68ch; }
 [data-reveal-group].is-visible > *:nth-child(6) { transition-delay: 350ms; }
 [data-reveal-group].is-visible > *:nth-child(7) { transition-delay: 420ms; }
 [data-reveal-group].is-visible > *:nth-child(8) { transition-delay: 490ms; }
+[data-reveal-clip] .reveal-clip__mask { clip-path: inset(0 0 100% 0); transition: clip-path var(--dur-slow) var(--ease-in-out); }
+[data-reveal-clip].is-visible .reveal-clip__mask { clip-path: inset(0 0 0 0); }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal], [data-reveal-group] > * { opacity: 1; transform: none; }
+  [data-reveal-clip] .reveal-clip__mask { clip-path: inset(0 0 0 0); transition: none; }
 }
 .no-js [data-reveal], .no-js [data-reveal-group] > * { opacity: 1; transform: none; }
+.no-js [data-reveal-clip] .reveal-clip__mask { clip-path: inset(0 0 0 0); }
 
 /* --------------------------------------------------------------------------
    Misc components

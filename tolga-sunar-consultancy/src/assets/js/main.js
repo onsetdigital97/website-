@@ -31,7 +31,7 @@
   }
 
   /* Scroll reveal */
-  var revealTargets = document.querySelectorAll("[data-reveal], [data-reveal-group]");
+  var revealTargets = document.querySelectorAll("[data-reveal], [data-reveal-group], [data-reveal-clip]");
   if ("IntersectionObserver" in window && revealTargets.length) {
     var io = new IntersectionObserver(
       function (entries) {
