@@ -594,7 +594,7 @@ p { max-width: 68ch; }
 /* --------------------------------------------------------------------------
    About / Consultant — full-bleed editorial layout
    -------------------------------------------------------------------------- */
-.about-bleed { display: grid; grid-template-columns: minmax(380px, min(48vw, 620px)) 1fr; align-items: stretch; background: var(--bg-surface); }
+.about-bleed { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; max-width: 1680px; margin-inline: auto; background: var(--bg-surface); }
 .about-bleed--alt { background: var(--c-offwhite-200); }
 .about-bleed__media {
   position: relative; overflow: hidden; align-self: start; aspect-ratio: 580 / 948;
@@ -603,7 +603,7 @@ p { max-width: 68ch; }
 .about-bleed__media .reveal-clip__mask { position: absolute; inset: 0; width: 100%; height: 100%; }
 .about-bleed__img { position: absolute; inset: -4% 0; width: 100%; height: 108%; object-fit: cover; object-position: 50% 50%; will-change: transform; }
 .about-bleed__content { display: flex; align-items: center; justify-content: center; padding-block: clamp(3rem, 6vw, 5rem); }
-.about-bleed__inner { max-width: 680px; padding-inline: clamp(1.5rem, 5vw, 5rem); }
+.about-bleed__inner { max-width: 560px; padding-inline: clamp(1.5rem, 5vw, 4rem); }
 .about-bleed__mark {
   display: block; font-family: var(--font-serif); font-size: 3.2rem; line-height: 1; font-style: normal;
   color: var(--c-bronze-500); opacity: 0.65; margin-top: 1.4rem; margin-bottom: -0.6rem;
