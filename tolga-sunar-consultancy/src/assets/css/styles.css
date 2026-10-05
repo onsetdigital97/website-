@@ -602,8 +602,8 @@ p { max-width: 68ch; }
 }
 .about-bleed__media .reveal-clip__mask { position: absolute; inset: 0; width: 100%; height: 100%; }
 .about-bleed__img { position: absolute; inset: -4% 0; width: 100%; height: 108%; object-fit: cover; object-position: 50% 50%; will-change: transform; }
-.about-bleed__content { display: flex; align-items: center; padding-block: clamp(3rem, 6vw, 5rem); }
-.about-bleed__inner { max-width: 640px; padding-inline: clamp(1.5rem, 5vw, 5rem) 1.5rem; }
+.about-bleed__content { display: flex; align-items: center; justify-content: center; padding-block: clamp(3rem, 6vw, 5rem); }
+.about-bleed__inner { max-width: 680px; padding-inline: clamp(1.5rem, 5vw, 5rem); }
 .about-bleed__mark {
   display: block; font-family: var(--font-serif); font-size: 3.2rem; line-height: 1; font-style: normal;
   color: var(--c-bronze-500); opacity: 0.65; margin-top: 1.4rem; margin-bottom: -0.6rem;
