@@ -6,6 +6,7 @@ bodyClass: "page-faq"
 permalink: /faq/
 ---
 {% from "partials/macros.njk" import breadcrumbs, ctaBanner, faqAccordion, factStrip with context %}
+{% from "partials/icons.njk" import icon %}
 
 <section class="page-hero">
   <div class="container page-hero__inner" data-reveal>
@@ -23,6 +24,13 @@ permalink: /faq/
     { value: "2 Werktage", label: "Rückmeldezeit" },
     { value: "Persönlich", label: "Statt Standardantwort" }
   ]) }}
+</div>
+
+<div class="container" style="padding-block: 2.5rem 0;">
+  <div class="img-placeholder img-placeholder--21-9" data-reveal>
+    {{ icon("image", 32) }}
+    <span>Platzhalter – Foto folgt</span>
+  </div>
 </div>
 
 <section class="section section--surface">
