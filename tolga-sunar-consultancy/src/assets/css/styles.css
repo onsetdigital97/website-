@@ -790,8 +790,13 @@ p { max-width: 68ch; }
   border-radius: var(--radius-sm); transition: background var(--dur-fast) var(--ease-out);
 }
 .contact-info-item:has(a):hover { background: var(--c-petrol-100); }
-.contact-info-item__icon { width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--c-petrol-100); color: var(--accent-strong); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform var(--dur-fast) var(--ease-out); }
-.contact-info-item:has(a):hover .contact-info-item__icon { transform: scale(1.08); }
+.contact-info-item__icon {
+  width: 44px; height: 44px; border-radius: 999px; background: var(--c-navy-900); color: var(--c-bronze-300);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  box-shadow: 0 6px 16px -8px rgba(12,21,38,0.45);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.contact-info-item:has(a):hover .contact-info-item__icon { transform: scale(1.08); box-shadow: 0 10px 20px -8px rgba(12,21,38,0.5); }
 .contact-info-item a { text-decoration: none; font-weight: 600; color: var(--text-heading); transition: color var(--dur-fast) var(--ease-out); }
 .contact-info-item a:hover { color: var(--accent-strong); }
 .contact-info-item span { display: block; font-size: 0.82rem; color: var(--c-ink-300); margin-bottom: 0.15rem; }
