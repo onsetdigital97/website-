@@ -755,8 +755,9 @@ p { max-width: 68ch; }
 /* --------------------------------------------------------------------------
    Forms
    -------------------------------------------------------------------------- */
-.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-.form-field { display: flex; flex-direction: column; gap: 0.45rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; min-width: 0; }
+.form-field { display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
+.form-field > * { min-width: 0; }
 .form-field--full { grid-column: 1 / -1; }
 .form-field label { font-size: 0.86rem; font-weight: 600; color: var(--text-heading); transition: color var(--dur-fast) var(--ease-out); }
 .form-field:focus-within label { color: var(--accent-strong); }
@@ -769,7 +770,7 @@ p { max-width: 68ch; }
   border-color: var(--accent-strong); box-shadow: 0 0 0 3px rgba(21,100,109,0.14); outline: none; transform: translateY(-1px);
 }
 .form-field textarea { resize: vertical; min-height: 120px; }
-.form-field__control { position: relative; }
+.form-field__control { position: relative; min-width: 0; }
 .form-field__control svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--c-ink-300); pointer-events: none; transition: color var(--dur-fast) var(--ease-out); }
 .form-field__control input { padding-left: 2.85rem; }
 .form-field:focus-within .form-field__control svg { color: var(--accent-strong); }
@@ -858,6 +859,7 @@ p { max-width: 68ch; }
 .related-service-link:hover { border-color: var(--accent-strong); color: var(--accent-strong); background: var(--c-petrol-100); }
 
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.two-col > * { min-width: 0; }
 @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; gap: 2rem; } }
 
 .icon-list { display: flex; flex-direction: column; gap: 1.1rem; }
