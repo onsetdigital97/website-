@@ -699,21 +699,6 @@ p { max-width: 68ch; }
 }
 
 /* --------------------------------------------------------------------------
-   Case study
-   -------------------------------------------------------------------------- */
-.case-study { border: 1px solid var(--c-line); border-radius: var(--radius-lg); background: var(--bg-surface); overflow: hidden; }
-.case-study__head { padding: 2.5rem 2.5rem 0; }
-.case-study__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2rem; }
-.case-study__col { padding: 1.6rem 1.75rem; border-top: 1px solid var(--c-line); border-right: 1px solid var(--c-line); }
-.case-study__col:last-child { border-right: none; }
-.case-study__col h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-strong); }
-.case-study__col p { margin-top: 0.5rem; font-size: 0.92rem; color: var(--c-ink-700); }
-.case-study__quote { padding: 2rem 2.5rem; background: var(--c-offwhite-200); border-top: 1px solid var(--c-line); }
-.case-study__cta { padding: 2rem 2.5rem 2.5rem; }
-@media (max-width: 900px) { .case-study__grid { grid-template-columns: repeat(2, 1fr); } .case-study__col:nth-child(2) { border-right: none; } }
-@media (max-width: 560px) { .case-study__grid { grid-template-columns: 1fr; } .case-study__col { border-right: none !important; } .case-study__head, .case-study__quote, .case-study__cta { padding-inline: 1.5rem; } }
-
-/* --------------------------------------------------------------------------
    Funding / BAFA
    -------------------------------------------------------------------------- */
 .funding-box {
