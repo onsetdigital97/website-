@@ -604,7 +604,28 @@ p { max-width: 68ch; }
    Integrated systems diagram
    -------------------------------------------------------------------------- */
 .integration-diagram { display: flex; align-items: center; justify-content: center; padding: 2rem; }
-.integration-diagram svg { width: 100%; height: auto; max-width: 440px; }
+.integration-diagram svg { width: 100%; height: auto; max-width: 440px; overflow: visible; }
+.integration-svg__circle {
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.integration-svg__circle--a { transform: translate(-42px, -30px); }
+.integration-svg__circle--b { transform: translate(42px, -30px); }
+.integration-svg__circle--c { transform: translate(0, 26px); transition-delay: 70ms; }
+.integration-diagram.is-visible .integration-svg__circle--a,
+.integration-diagram.is-visible .integration-svg__circle--b,
+.integration-diagram.is-visible .integration-svg__circle--c {
+  transform: translate(0, 0);
+}
+.integration-diagram.is-visible .integration-svg__circle--b { transition-delay: 90ms; }
+.integration-diagram.is-visible .integration-svg__circle--c { transition-delay: 180ms; }
+.integration-svg__core {
+  opacity: 0; transform: translateY(12px); transform-origin: 220px 205px;
+  transition: opacity var(--dur-med) var(--ease-out) 620ms, transform var(--dur-med) var(--ease-out) 620ms;
+}
+.integration-diagram.is-visible .integration-svg__core { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .integration-svg__circle, .integration-svg__core { transition: none; transform: none; opacity: 1; }
+}
 .integration-benefits { display: grid; gap: 1rem; }
 .integration-benefit { display: flex; gap: 0.9rem; align-items: flex-start; }
 .integration-benefit__check { width: 26px; height: 26px; border-radius: 999px; background: var(--c-petrol-100); color: var(--accent-strong); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
