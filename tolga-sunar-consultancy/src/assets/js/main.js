@@ -123,6 +123,7 @@
   if (form) {
     var statusBox = form.querySelector("[data-form-status]");
     var submitBtn = form.querySelector("[data-form-submit]");
+    var submitBtnLabel = form.querySelector("[data-form-submit-label]");
 
     var showStatus = function (type, message) {
       statusBox.textContent = message;
@@ -169,17 +170,41 @@
       }
 
       var endpoint = form.getAttribute("data-endpoint");
-      if (!endpoint || endpoint === "#") {
-        /* No backend configured yet: show success state so the UX can be reviewed end-to-end. */
+      var mailTarget = form.getAttribute("data-mailto");
+      if ((!endpoint || endpoint === "#") && mailTarget) {
+        /* No server backend yet: hand the filled-in request off to the visitor's own email client. */
+        var data = new FormData(form);
+        var subject = "Anfrage Erstgespräch – " + (data.get("name") || "");
+        var bodyLines = [
+          "Name: " + (data.get("name") || ""),
+          "Unternehmen: " + (data.get("company") || ""),
+          "E-Mail: " + (data.get("email") || ""),
+          "Telefon: " + (data.get("phone") || "–"),
+          "Gewünschte Norm / Leistung: " + (data.get("topic") || ""),
+          "Aktueller Projektstand: " + (data.get("status") || ""),
+          "Gewünschter Zertifizierungszeitpunkt: " + (data.get("timeline") || ""),
+          "",
+          "Nachricht:",
+          data.get("message") || "",
+        ];
+        var mailtoUrl = "mailto:" + mailTarget + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyLines.join("\n"));
+        window.location.href = mailtoUrl;
         form.reset();
         form.hidden = true;
         var successState = document.querySelector("[data-form-success]");
         if (successState) successState.hidden = false;
         return;
       }
+      if (!endpoint || endpoint === "#") {
+        form.reset();
+        form.hidden = true;
+        var successStateFallback = document.querySelector("[data-form-success]");
+        if (successStateFallback) successStateFallback.hidden = false;
+        return;
+      }
 
       submitBtn.disabled = true;
-      submitBtn.textContent = "Wird gesendet …";
+      if (submitBtnLabel) submitBtnLabel.textContent = "Wird gesendet …";
 
       fetch(endpoint, {
         method: "POST",
@@ -201,7 +226,7 @@
         })
         .finally(function () {
           submitBtn.disabled = false;
-          submitBtn.textContent = "Anfrage senden";
+          if (submitBtnLabel) submitBtnLabel.textContent = "Anfrage senden";
         });
     });
   }
