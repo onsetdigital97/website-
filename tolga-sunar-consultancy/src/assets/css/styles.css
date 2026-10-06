@@ -845,6 +845,15 @@ p { max-width: 68ch; }
 .icon-list { display: flex; flex-direction: column; gap: 1.1rem; }
 .icon-list li { display: flex; gap: 0.85rem; align-items: flex-start; font-size: 0.96rem; color: var(--c-ink-700); }
 .icon-list li svg { flex-shrink: 0; margin-top: 0.2rem; color: var(--accent-strong); }
+.icon-list--cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.icon-list--cards li {
+  background: var(--c-offwhite-200); border-radius: var(--radius-md); padding: 1.15rem 1.35rem;
+  transition: transform var(--dur-card) var(--ease-out), box-shadow var(--dur-card) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .icon-list--cards li:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -24px rgba(12,21,38,0.18); }
+}
+@media (max-width: 640px) { .icon-list--cards { grid-template-columns: 1fr; } }
 
 .audience-tags { display: flex; flex-wrap: wrap; gap: 0.7rem; }
 .audience-tag { padding: 0.5rem 0.95rem; background: var(--c-offwhite-200); border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: var(--c-ink-700); }
