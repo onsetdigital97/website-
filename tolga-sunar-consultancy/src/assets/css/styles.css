@@ -790,7 +790,7 @@ p { max-width: 68ch; }
   border-radius: var(--radius-sm); transition: background var(--dur-fast) var(--ease-out);
 }
 .contact-info-item:has(a):hover { background: var(--c-petrol-100); }
-.contact-info-item__icon {
+.contact-info-item .contact-info-item__icon {
   width: 44px; height: 44px; border-radius: 999px; background: var(--c-navy-900); color: var(--c-bronze-300);
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   box-shadow: 0 6px 16px -8px rgba(12,21,38,0.45);
