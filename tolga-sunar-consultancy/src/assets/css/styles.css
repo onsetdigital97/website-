@@ -527,16 +527,21 @@ p { max-width: 68ch; }
 /* --------------------------------------------------------------------------
    Benefit ledger — audit-checklist treatment for the benefits list
    -------------------------------------------------------------------------- */
-.benefit-ledger { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--c-line); }
-.benefit-ledger__col { padding-inline: 0 2.5rem; }
-.benefit-ledger__col + .benefit-ledger__col { padding-inline: 2.5rem 0; border-left: 1px solid var(--c-line); }
-.benefit-item { display: grid; grid-template-columns: 26px 1fr; gap: 1rem; padding-block: 1.3rem; border-bottom: 1px solid var(--c-line); }
+.benefit-ledger {
+  column-count: 2; column-gap: 5rem; -webkit-column-gap: 5rem;
+  column-rule: 1px solid var(--c-line); -webkit-column-rule: 1px solid var(--c-line);
+  border-top: 1px solid var(--c-line);
+}
+.benefit-item {
+  display: grid; grid-template-columns: 26px 1fr; gap: 1rem; padding-block: 1.3rem;
+  border-bottom: 1px solid var(--c-line);
+  break-inside: avoid; -webkit-column-break-inside: avoid;
+}
 .benefit-item__mark { color: var(--accent-strong); margin-top: 0.15rem; }
 .benefit-item strong { display: block; color: var(--text-heading); font-size: 0.98rem; }
 .benefit-item span { display: block; color: var(--c-ink-500); font-size: 0.88rem; margin-top: 0.25rem; }
 @media (max-width: 780px) {
-  .benefit-ledger { grid-template-columns: 1fr; }
-  .benefit-ledger__col, .benefit-ledger__col + .benefit-ledger__col { padding-inline: 0; border-left: none; }
+  .benefit-ledger { column-count: 1; }
 }
 
 .benefit-card {
