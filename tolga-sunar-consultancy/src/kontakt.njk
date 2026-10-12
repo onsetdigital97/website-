@@ -105,6 +105,11 @@ permalink: /kontakt/
         </div>
 
         <div class="form-field form-field--full">
+          <label for="preferredDate">Wunschtermin für das Erstgespräch <span class="optional">(optional)</span></label>
+          <input type="text" id="preferredDate" name="preferredDate" placeholder="z. B. Dienstag oder Donnerstag vormittags">
+        </div>
+
+        <div class="form-field form-field--full">
           <label for="message">Ihre Nachricht</label>
           <textarea id="message" name="message" required placeholder="Beschreiben Sie kurz Ihre Ausgangslage und Ihr Anliegen."></textarea>
           <span class="form-error" data-error-for="message"></span>
@@ -123,6 +128,7 @@ permalink: /kontakt/
           <div class="form-status" data-form-status tabindex="-1"></div>
         </div>
       </form>
+      <p class="text-muted" style="margin-top:1rem; font-size:0.86rem;">Wir melden uns innerhalb von 24 Stunden und bestätigen Ihren Termin.</p>
 
       <div data-form-success hidden style="margin-top:1.5rem; padding:1.75rem; border-radius: var(--radius-md); background: var(--c-petrol-100); border: 1px solid rgba(21,100,109,0.25);">
         <h3 style="font-size:1.1rem;">Fast geschafft.</h3>
@@ -148,7 +154,7 @@ permalink: /kontakt/
           </div>
           <div class="contact-info-item">
             <span class="contact-info-item__icon">{{ icon("clock", 20) }}</span>
-            <div><span>Rückmeldezeit</span><span style="font-weight:600; color: var(--text-heading);">In der Regel innerhalb von 2 Werktagen</span></div>
+            <div><span>Rückmeldezeit</span><span style="font-weight:600; color: var(--text-heading);">In der Regel innerhalb von 24 Stunden</span></div>
           </div>
         </div>
         <hr class="divider-line" style="margin-block: 1.75rem;">

@@ -7,7 +7,7 @@
   <title>{{ title }} – {{ site.shortName }}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  {% if noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
+  {% if noindex or staging %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">

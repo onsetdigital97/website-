@@ -236,11 +236,13 @@ p { max-width: 68ch; }
 .brand__name { font-weight: 700; font-size: 1rem; color: var(--c-white); }
 .brand__sub { font-size: 0.68rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--c-bronze-300); }
 
-.main-nav { display: none; }
-.main-nav__list { display: flex; align-items: center; gap: 2.1rem; }
+.main-nav { display: none; min-width: 0; flex-shrink: 1; }
+.main-nav__list { display: flex; align-items: center; gap: 1.5rem; flex-wrap: nowrap; }
+.main-nav__list li { flex-shrink: 0; }
 .main-nav__link {
   font-size: 0.95rem; font-weight: 600; text-decoration: none; color: rgba(250,248,244,0.82);
   padding: 0.5rem 0; position: relative; transition: color var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
 }
 .main-nav__link::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--c-bronze-300);
@@ -339,7 +341,8 @@ p { max-width: 68ch; }
   background: radial-gradient(closest-side, rgba(28,124,134,0.35), transparent 70%);
   pointer-events: none;
 }
-.hero__inner { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
+.hero__inner { position: relative; display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+.hero__inner > div { max-width: 46rem; }
 .hero__eyebrow { color: var(--c-bronze-300); }
 .hero__eyebrow::before { background: var(--c-bronze-300); }
 .hero h1 { margin-top: 1rem; color: var(--c-white); }

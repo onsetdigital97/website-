@@ -183,6 +183,7 @@
           "Gewünschte Norm / Leistung: " + (data.get("topic") || ""),
           "Aktueller Projektstand: " + (data.get("status") || ""),
           "Gewünschter Zertifizierungszeitpunkt: " + (data.get("timeline") || ""),
+          "Wunschtermin für das Erstgespräch: " + (data.get("preferredDate") || "–"),
           "",
           "Nachricht:",
           data.get("message") || "",
